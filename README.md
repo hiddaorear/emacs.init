@@ -1,0 +1,2 @@
+# emacs.init
+emacs init
