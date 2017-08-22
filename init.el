@@ -16,6 +16,7 @@
 (require 'init-packages)
 (require 'init-better-defaults)
 (require 'init-mode)
+(require 'init-helm)
 (require 'init-ui)
 (require 'init-keybindings)
 (require 'init-org)
@@ -34,7 +35,7 @@
     ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" default)))
  '(package-selected-packages
    (quote
-    (evil-leader evil-nerd-commenter evil solarized-theme company))))
+    ())))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
