@@ -23,8 +23,10 @@
 (setq show-paren-style 'parenthesse)
 
 (setq-default indent-tabs-mode nil) ;; forbidden tab retarct
-(setq-default tab-width 4) ;; set tab 2
-(setq c-default-style "linux") ;; parentheses not retarct
+(setq-default tab-width 4) ;; set tab 4
+(setq c-default-style "linux" c-basic-offset 4) ;; parentheses not retarct
+;;(setq c-default-style "ellemtel" c-basic-offset 4)
+(setq tab-width 4 indent-tabs-mode nil)
 
 
 (setq default-directory "~/Github/")
