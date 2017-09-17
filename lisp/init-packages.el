@@ -20,12 +20,19 @@
 		;; --- Auto-completion ---
 		company
 		;; --- Better Editor ---
+        helm
+        helm-projectile
 		hungry-delete
 		swiper
 		counsel
 		smartparens
+        ;; --- Vim ---
+        evil-leader
+        evil-nerd-commenter
+        evil 
 		;; --- Major Mode ---
 		js2-mode
+        web-mode
 		;; --- Minor Mode ---
 		nodejs-repl
 		exec-path-from-shell
