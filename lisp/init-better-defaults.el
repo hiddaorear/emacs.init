@@ -9,12 +9,6 @@
 (set-selection-coding-system 'utf-8) ;; selecion coding
 (set-keyboard-coding-system 'utf-8) ;; keboard coding
 
-;; close gun start and buffer words and reminder voice
-(setq inhibit-startup-message t)
-(setq guns-inhibit-startup-message t)
-(setq inhibit-scratch-message "") ;; inhibit buffer words
-(setq ring-bell-funcion 'ignore) ;; inhibit reminder voice
-
 ;; grammar highlight
 (global-font-lock-mode t)
 
@@ -22,24 +16,25 @@
 (show-paren-mode t)
 (setq show-paren-style 'parenthesse)
 
-(setq-default indent-tabs-mode nil) ;; forbidden tab retarct
-(setq-default tab-width 4) ;; set tab 4
+(setq-default                   ; 使用空格缩进
+        indent-tabs-mode nil    ; t 使用 TAB 作格式化字符  nil 使用空格作格式化字符
+        tab-always-indent nil
+        tab-width 4)
 (setq c-default-style "linux" c-basic-offset 4) ;; parentheses not retarct
 ;;(setq c-default-style "ellemtel" c-basic-offset 4)
 (setq tab-width 4 indent-tabs-mode nil)
 
 
-(setq default-directory "~/Github/")
+(setq default-directory "~/Jobs")
 
 (global-auto-revert-mode t)
 
 (setq make-backup-files nil)
 (setq auto-save-default nil)
-(setq undo-outer-limit 100000) ;; undo
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
-(recentf-mode 1)			
+(recentf-mode 1)
 (setq recentf-max-menu-items 25)
 
 
@@ -50,5 +45,23 @@
 ;; ANSI color Shell
 (autoload 'ansi-color-for-comint-mode-on "ansi-color" nil t)
 (add-hook 'shell-mode-hook 'ansi-color-for-comint-mode-on t)
+
+;; * max
+(setq max-lisp-eval-depth   1000        ;lisp最大执行深度   500
+      max-specpdl-size      10000       ;最大容量           1000
+      kill-ring-max         1024        ;kill ring          60
+      undo-outer-limit      5000000     ;撤销限制           12000000
+      ark-ring-max          1024        ;mark ring          16
+)
+
+
+;; * Common
+(setq message-log-max         t        ;完整的 message-log
+      inhibit-startup-message t        ;关闭起动时闪屏
+      initial-scratch-message          ;初始内容
+      (purecopy "
+;; In sandbox "))
+
+(set-face-attribute 'fringe nil :foreground (background-color-at-point))
 
 (provide 'init-better-defaults)

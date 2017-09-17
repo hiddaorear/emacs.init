@@ -5,6 +5,15 @@
 (helm-mode 1)
 (helm-autoresize-mode 1)
 ;(setq helm-ff-auto-update-initial-value nil)    ; 禁止自动补全
+;;(setq helm-full-frame t)
+
+(defun helm-mini--use-full-frame (orig-fun &rest args)
+  (let ((helm-full-frame t))
+    (apply orig-fun args)))
+
+(advice-add 'helm-mini :around #'helm-mini--use-full-frame)
+(setq helm-buffers-fuzzy-matching t
+      helm-recentf-fuzzy-match    t)
 
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
