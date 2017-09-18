@@ -29,8 +29,6 @@
 
 (global-auto-revert-mode t)
 
-(setq make-backup-files nil)
-(setq auto-save-default nil)
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -61,6 +59,48 @@
       initial-scratch-message          ;初始内容
       (purecopy "
 ;; In sandbox "))
+
+;; make backup to a designated dir, mirroring the full path
+(defun my-backup-file-name (fpath)
+  "Return a new file path of a given file path.
+  If the new path's directories does not exist, create them."
+  (let* (
+         (backupRootDir "~/.emacs.d/emacs-backup/")
+         (filePath (replace-regexp-in-string "[A-Za-z]:" "" fpath )) ; remove Windows driver letter in path, for example, “C:”
+         (backupFilePath (replace-regexp-in-string "//" "/" (concat backupRootDir filePath "~") ))
+         )
+    (make-directory (file-name-directory backupFilePath) (file-name-directory backupFilePath))
+    backupFilePath
+    )
+  )
+
+  (message "Deleting old backup files...")
+  (let ((week (* 60 60 24 7))
+        (current (float-time (current-time))))
+    (dolist (file (directory-files temporary-file-directory t))
+      (when (and (backup-file-name-p file)
+                 (> (- current (float-time (fifth (file-attributes file))))
+                    week))
+        (message "%s" file)
+        (delete-file file))))
+
+  (setq make-backup-file-name-function 'my-backup-file-name)
+
+  ;; Save all tempfiles in $TMPDIR/emacs$UID/
+  (defconst emacs-tmp-dir (expand-file-name (format "emacs%d" (user-uid)) temporary-file-directory))
+  (setq backup-directory-alist
+        `((".*" . ,emacs-tmp-dir)))
+  (setq auto-save-file-name-transforms
+        `((".*" ,emacs-tmp-dir t)))
+  (setq auto-save-list-file-prefix
+        emacs-tmp-dir)
+
+  (setq create-lockfiles nil)
+
+;; Uniquify
+(setq uniquify-buffer-name-style 'post-forward-angle-brackets) ;反方向的显示重复的Buffer名字
+(setq uniquify-separator "/")                                  ;分隔符
+(setq uniquify-after-kill-buffer-p t)                          ;删除重复名字的Buffer后重命名
 
 (set-face-attribute 'fringe nil :foreground (background-color-at-point))
 
