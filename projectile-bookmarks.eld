@@ -1,0 +1,1 @@
+("~/Github/hiddaorear.github.io/" "~/Jobs/ec_fe/")

@@ -29,10 +29,13 @@
         ;; --- Vim ---
         evil-leader
         evil-nerd-commenter
-        evil 
+        evil
+        evil-anzu
 		;; --- Major Mode ---
 		js2-mode
         web-mode
+        rjsx-mode
+        less-css-mode
 		;; --- Minor Mode ---
 		nodejs-repl
 		exec-path-from-shell

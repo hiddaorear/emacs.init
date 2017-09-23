@@ -18,6 +18,7 @@
 (require 'init-mode)
 (require 'init-helm)
 (require 'init-evil)
+(require 'init-occur)
 (require 'init-ui)
 (require 'init-keybindings)
 (require 'init-org)
