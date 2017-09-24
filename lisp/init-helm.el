@@ -34,11 +34,11 @@
 
 (global-set-key (kbd "M-x") 'helm-M-x)
 (global-set-key (kbd "M-y") 'helm-show-kill-ring)
-(global-set-key (kbd "C-x b") 'helm-mini)
-(global-set-key (kbd "C-x f") 'helm-find-files)
-(global-set-key (kbd "C-x C-f") 'helm-find)
-(global-set-key (kbd "C-x i") 'helm-semantic-or-imenu)
-(global-set-key (kbd "C-x o") 'helm-occur)
+(global-set-key (kbd "C-c b") 'helm-mini)
+(global-set-key (kbd "C-c f") 'helm-find-files)
+(global-set-key (kbd "C-c C-f") 'helm-find)
+(global-set-key (kbd "C-c i") 'helm-semantic-or-imenu)
+(global-set-key (kbd "C-c s") 'helm-occur)
 (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
 
 (setq helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
@@ -69,7 +69,7 @@
           'spacemacs//helm-hide-minibuffer-maybe)
 
 (setq helm-autoresize-max-height 0)
-(setq helm-autoresize-min-height 20)
+(setq helm-autoresize-min-height 40)
 (helm-autoresize-mode 1)
 
 (provide 'init-helm)

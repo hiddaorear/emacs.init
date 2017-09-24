@@ -26,6 +26,8 @@
 		swiper
 		counsel
 		smartparens
+        ;; dired
+        dired+
         ;; --- Vim ---
         evil-leader
         evil-nerd-commenter

@@ -17,6 +17,7 @@
 (require 'init-better-defaults)
 (require 'init-mode)
 (require 'init-helm)
+(require 'init-dired)
 (require 'init-evil)
 (require 'init-occur)
 (require 'init-ui)

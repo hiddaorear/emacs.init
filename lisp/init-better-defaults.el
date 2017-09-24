@@ -104,4 +104,5 @@
 
 (set-face-attribute 'fringe nil :foreground (background-color-at-point))
 
+
 (provide 'init-better-defaults)
