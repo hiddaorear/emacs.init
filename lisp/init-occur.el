@@ -1,18 +1,3 @@
-(defun occur-dwim ()
-  "Call `occur' with a sane default."
-  (interactive)
-  (push (if (region-active-p)
-	    (buffer-substring-no-properties
-	     (region-beginning)
-	     (region-end))
-	  (let ((sym (thing-at-point 'symbol)))
-	    (when (stringp sym)
-	      (regexp-quote sym))))
-	regexp-history)
-  (call-interactively 'occur))
-(global-set-key (kbd "M-s o") 'occur-dwim)
-
-
 (defun occurs (&optional arg)
     "Switch to *Occur* buffer, or run `occur'.
   Without a prefix argument, switch to the buffer.
@@ -107,5 +92,20 @@ of any of the matches found in occur."
 (define-key occur-mode-map (kbd "RET") 'occur-mode-display-occurrence)
 (define-key occur-mode-map (kbd "p") 'previous-line)
 (define-key occur-mode-map (kbd "n") 'next-line)
+
+(defun occur-selected-the-word ()
+  "Call `occur' with a sane default."
+  (interactive)
+  (push (if (region-active-p)
+            (buffer-substring-no-properties
+             (region-beginning)
+             (region-end))
+          (let ((sym (thing-at-point 'symbol)))
+            (when (stringp sym)
+              (regexp-quote sym))))
+        regexp-history)
+  (call-interactively 'occur))
+(global-set-key (kbd "C-c w") 'occur-selected-the-word)
+
 
 (provide 'init-occur)

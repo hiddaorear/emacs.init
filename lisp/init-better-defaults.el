@@ -25,10 +25,9 @@
 (setq tab-width 4 indent-tabs-mode nil)
 
 
-(setq default-directory "~/Jobs")
+(setq default-directory "~")
 
 (global-auto-revert-mode t)
-
 
 (fset 'yes-or-no-p 'y-or-n-p)
 
@@ -66,7 +65,8 @@
   If the new path's directories does not exist, create them."
   (let* (
          (backupRootDir "~/.emacs.d/emacs-backup/")
-         (filePath (replace-regexp-in-string "[A-Za-z]:" "" fpath )) ; remove Windows driver letter in path, for example, “C:”
+         (filePath (replace-regexp-in-string "[A-Za-z]:" "" fpath ))
+         ; remove Windows driver letter in path, for example, “C:”
          (backupFilePath (replace-regexp-in-string "//" "/" (concat backupRootDir filePath "~") ))
          )
     (make-directory (file-name-directory backupFilePath) (file-name-directory backupFilePath))
@@ -103,6 +103,24 @@
 (setq uniquify-after-kill-buffer-p t)                          ;删除重复名字的Buffer后重命名
 
 (set-face-attribute 'fringe nil :foreground (background-color-at-point))
+
+
+;; bookmark
+(defadvice bookmark-jump (after bookmark-jump activate)
+  (let ((latest (bookmark-get-bookmark bookmark)))
+    (setq bookmark-alist (delq latest bookmark-alist))
+    (add-to-list 'bookmark-alist latest)))
+
+(defun bookmark-to-abbrevs ()
+   "Create abbrevs based on `bookmark-alist'."
+   (dolist (bookmark bookmark-alist)
+   (let* ((name (car bookmark))
+          (file (bookmark-get-filename name)))
+     (define-abbrev global-abbrev-table name file))))
+
+(setq bookmark-save-flag 1) ; everytime bookmark is changed, automatically save it
+(setq bookmark-save-flag t) ; save bookmark when emacs quits
+(setq bookmark-save-flag nil) ; never auto save.
 
 
 (provide 'init-better-defaults)

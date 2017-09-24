@@ -15,8 +15,6 @@
     (apply orig-fun args)))
 
 (advice-add 'helm-mini :around #'helm-mini--use-full-frame)
-(setq helm-buffers-fuzzy-matching t
-      helm-recentf-fuzzy-match    t)
 
 ;; The default "C-x c" is quite close to "C-x C-c", which quits Emacs.
 ;; Changed to "C-c h". Note: We must set "C-c h" globally, because we

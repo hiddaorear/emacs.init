@@ -12,13 +12,10 @@
 (global-company-mode 1)
 (global-hl-line-mode 1)
 
-(global-evil-leader-mode)
-(evil-mode 1)
-(setcdr evil-insert-state-map nil)
-(define-key evil-insert-state-map [escape] 'evil-normal-state)
-(evilnc-default-hotkeys)
-(define-key evil-normal-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
-(define-key evil-visual-state-map (kbd ",/") 'evilnc-comment-or-uncomment-lines)
+;; which-key
+(which-key-mode 1)
+(which-key-setup-side-window-bottom)
+(which-key-setup-minibuffer)
 
 ;; rjsx-mode
 (defadvice js-jsx-indent-line (after js-jsx-indent-line-after-hack activate)

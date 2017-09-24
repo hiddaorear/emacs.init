@@ -26,6 +26,7 @@
 		swiper
 		counsel
 		smartparens
+        which-key
         ;; dired
         dired+
         ;; --- Vim ---

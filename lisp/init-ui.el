@@ -1,6 +1,11 @@
+;; bookmark
+(setq inhibit-splash-screen t)
+(require 'bookmark)
+(bookmark-bmenu-list)
+(switch-to-buffer "*Bookmark List*")
+
 ;; setq
 (setq-default cursor-type 'bar)
-(setq inhibit-splash-screen t)
 ;; (setq initial-frame-alist (quote ((fullscreen . maximized))))
 (setq recentf-max-menu-item 10)
 
