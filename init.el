@@ -31,3 +31,4 @@
 (require 'init-org)
 (require 'init-avy)
 (require 'init-powerline)
+(put 'upcase-region 'disabled nil)

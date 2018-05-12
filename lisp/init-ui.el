@@ -6,19 +6,30 @@
 
 ;; setq
 (setq-default cursor-type 'bar)
-;; (setq initial-frame-alist (quote ((fullscreen . maximized))))
+(setq initial-frame-alist (quote ((fullscreen . maximized))))
 (setq recentf-max-menu-item 10)
 
 ;; theme
 (load-theme 'solarized-light t)
 ;; make the fringe stand out from the background
 (setq solarized-distinct-fringe-background t)
+;; Don't change the font for some headings and titles
+(setq solarized-use-variable-pitch nil)
 ;; make the modeline high contrast
 (setq solarized-high-contrast-mode-line t)
 ;; Use less bolding
 (setq solarized-use-less-bold t)
 ;; Use more italics
 (setq solarized-use-more-italic t)
+;; Use less colors for indicators such as git:gutter, flycheck and similar
+(setq solarized-emphasize-indicators nil)
+;; Don't change size of org-mode headlines (but keep other size-changes)
+(setq solarized-scale-org-headlines nil)
+
+;; mode-line
+(setq x-underline-at-descent-line t)
+(setq x-use-underline-position-properties nil)
+(setq underline-minimum-offset 4)
 
 
 ;; font
@@ -42,6 +53,7 @@
 (setq display-time-day-and-date t)
 (setq time-stamp-warn-inactive t)
 (setq time-stamp-format "%:u %02m/%02d/%04y %02H:%02M:%02S")
+
 
 (define-advice show-paren-function (:around (fn) fix-show-paren-function)
   "Highlight enclosing parens."
