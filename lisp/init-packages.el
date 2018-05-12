@@ -32,6 +32,7 @@
                 counsel
                 smartparens
                 flycheck
+                undo-tree
                 ;; --- Major Mode ---
                 js2-mode
                 web-mode

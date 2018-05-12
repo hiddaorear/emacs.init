@@ -17,6 +17,11 @@
 (which-key-setup-side-window-bottom)
 (which-key-setup-minibuffer)
 
+;; undo-tree
+(require 'undo-tree)
+(global-undo-tree-mode)
+
+
 ;; rjsx-mode
 (defadvice js-jsx-indent-line (after js-jsx-indent-line-after-hack activate)
   "Workaround sgml-mode and follow airbnb component style."
