@@ -30,5 +30,8 @@
 (require 'init-keybindings)
 (require 'init-org)
 (require 'init-avy)
+(require 'format-mode-line)
 (require 'init-powerline)
+
+
 (put 'upcase-region 'disabled nil)

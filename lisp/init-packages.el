@@ -31,6 +31,7 @@
                 swiper
                 counsel
                 smartparens
+                flycheck
                 ;; --- Major Mode ---
                 js2-mode
                 web-mode
