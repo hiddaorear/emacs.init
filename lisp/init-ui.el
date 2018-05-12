@@ -16,7 +16,7 @@
 ;; Setting English Font
 (set-face-attribute 'default nil :font "Monaco 14")
 
-(setq frame-title-format "Yvan emacs@%b")
+(setq frame-title-format "Siegel emacs@%b")
 
 ;; line and column
 (column-number-mode t) ;; column number on bar

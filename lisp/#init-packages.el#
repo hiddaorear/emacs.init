@@ -1,3 +1,4 @@
+
 ;;  __        __             __   ___
 ;; |__)  /\  /  ` |__/  /\  / _` |__
 ;; |    /~~\ \__, |  \ /~~\ \__> |___
@@ -45,7 +46,6 @@
                 ) "Default packages")
 
  (setq package-selected-packages my/packages)
-
  (defun my/packages-installed-p ()
      (loop for pkg in my/packages
            when (not (package-installed-p pkg)) do (return nil)

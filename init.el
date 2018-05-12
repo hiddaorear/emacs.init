@@ -30,3 +30,4 @@
 (require 'init-keybindings)
 (require 'init-org)
 (require 'init-avy)
+(require 'init-powerline)
