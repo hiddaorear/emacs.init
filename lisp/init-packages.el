@@ -11,7 +11,7 @@
                               ("user42" . "http://download.tuxfamily.org/user42/elpa/packages/")
                               ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
      (package-initialize)
-     (package-refresh-contents)
+     ;;(package-refresh-contents)
 
 ;; 注意 elpa.emacs-china.org 是 Emacs China 中文社区在国内搭建的一个 ELPA 镜像
 

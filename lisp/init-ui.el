@@ -11,6 +11,15 @@
 
 ;; theme
 (load-theme 'solarized-light t)
+;; make the fringe stand out from the background
+(setq solarized-distinct-fringe-background t)
+;; make the modeline high contrast
+(setq solarized-high-contrast-mode-line t)
+;; Use less bolding
+(setq solarized-use-less-bold t)
+;; Use more italics
+(setq solarized-use-more-italic t)
+
 
 ;; font
 ;; Setting English Font
