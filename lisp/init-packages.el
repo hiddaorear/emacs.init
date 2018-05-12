@@ -4,11 +4,14 @@
 ;;                      __   ___        ___      ___
 ;; |\/|  /\  |\ |  /\  / _` |__   |\/| |__  |\ |  |
 ;; |  | /~~\ | \| /~~\ \__> |___  |  | |___ | \|  |
+
 (when (>= emacs-major-version 24)
      (require 'package)
-     (package-initialize)
      (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
-		      ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
+                              ("user42" . "http://download.tuxfamily.org/user42/elpa/packages/")
+                              ("melpa" . "http://elpa.emacs-china.org/melpa/"))))
+     (package-initialize)
+     (package-refresh-contents)
 
 ;; 注意 elpa.emacs-china.org 是 Emacs China 中文社区在国内搭建的一个 ELPA 镜像
 
@@ -17,53 +20,44 @@
 
  ;; Add Packages
  (defvar my/packages '(
-		;; --- Auto-completion ---
-		company
-		;; --- Better Editor ---
-        helm
-        helm-projectile
-		hungry-delete
-		swiper
-		counsel
-		smartparens
-        which-key
-        ;; dired
-        dired+
-        ;; --- Vim ---
-        evil-leader
-        evil-nerd-commenter
-        evil
-        evil-anzu
-		;; --- Major Mode ---
-		js2-mode
-        web-mode
-        rjsx-mode
-        less-css-mode
-		;; --- Minor Mode ---
-		nodejs-repl
-		exec-path-from-shell
-		;; --- Themes ---
-		monokai-theme
-		solarized-theme
-		) "Default packages")
+                ;; --- Auto-completion ---
+                company
+                ;; --- Better Editor ---
+                helm
+                which-key
+                avy
+                dired+
+                hungry-delete
+                swiper
+                counsel
+                smartparens
+                ;; --- Major Mode ---
+                js2-mode
+                web-mode
+                rjsx-mode
+                less-css-mode
+                ;; --- Minor Mode ---
+                nodejs-repl
+                exec-path-from-shell
+                ;; --- Themes ---
+                solarized-theme
+                ) "Default packages")
 
  (setq package-selected-packages my/packages)
 
  (defun my/packages-installed-p ()
      (loop for pkg in my/packages
-	   when (not (package-installed-p pkg)) do (return nil)
-	   finally (return t)))
+           when (not (package-installed-p pkg)) do (return nil)
+           finally (return t)))
 
  (unless (my/packages-installed-p)
      (message "%s" "Refreshing package database...")
      (package-refresh-contents)
      (dolist (pkg my/packages)
        (when (not (package-installed-p pkg))
-	 (package-install pkg))))
+         (package-install pkg))))
 
  ;; Find Executable Path on OS X
  (when (memq window-system '(mac ns))
    (exec-path-from-shell-initialize))
-
-
 (provide 'init-packages)

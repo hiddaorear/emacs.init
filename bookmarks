@@ -2,9 +2,19 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("init-better-defaults"
- (filename . "~/.emacs.d/lisp/init-better-defaults.el")
- (front-context-string . "(set-language-en")
- (rear-context-string)
- (position . 15))
+(("om"
+ (filename . "~/Jobs/om/")
+ (front-context-string . "project_labeling")
+ (rear-context-string . "8B Apr 24 18:10 ")
+ (position . 407))
+("image_task_allot_index"
+ (filename . "~/Jobs/om/project_labeling/labeling/LabelingFrontEnd/src/components/imageTaskAllotIndex/views/imageTaskAllotIndex.jsx")
+ (front-context-string . "\nclass ImageTask")
+ (rear-context-string . "= Tabs.TabPane;\n")
+ (position . 305))
+("todlist"
+ (filename . "~/Jobs/om/")
+ (front-context-string . "todolist\n  -rw-r")
+ (rear-context-string . "8B May  2 18:50 ")
+ (position . 658))
 )

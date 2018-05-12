@@ -1,0 +1,35 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode html-mode
+      :tags 
+        '( ("click here" anchor nil nil [71 74]))          
+      :file "change_email.html"
+      :pointmax 440
+      :fsize 439
+      :lastmodtime '(23092 55316 372260 93000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode html-mode
+      :tags 
+        '( ("click here" anchor nil nil [101 104]))          
+      :file "confirm.html"
+      :pointmax 461
+      :fsize 460
+      :lastmodtime '(23092 55378 656272 784000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode html-mode
+      :tags 
+        '( ("click here" anchor nil nil [60 63]))          
+      :file "reset_password.html"
+      :pointmax 511
+      :fsize 510
+      :lastmodtime '(23092 55396 636147 205000)
+      :unmatched-syntax nil))
+  :file "!Users!wang!Github!study_python!app!templates!auth!email!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

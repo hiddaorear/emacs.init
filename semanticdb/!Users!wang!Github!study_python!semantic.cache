@@ -1,0 +1,96 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("flask_migrate" include nil nil [11 44])
+            ("app" include nil nil [45 75])
+            ("app.models" include nil nil [76 109])
+            ("app" variable nil nil [111 167])
+            ("migrate" variable nil nil [168 194])
+            ("make_shell_context" function (:decorators 
+              ( ("app.shell_context_processor" function (:type "decorator") nil nil))              ) nil [196 296]))          
+      :file "shixia.py"
+      :pointmax 296
+      :fsize 483
+      :lastmodtime '(23092 57263 678572 489000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("basedir" variable nil nil [11 63])
+            ("Config" type
+               (:members 
+                  ( ("SECRET_KEY" code nil (reparse-symbol indented_block_body) [84 151])
+                    ("MAIL_SERVER" variable nil (reparse-symbol indented_block_body) [156 222])
+                    ("MAIL_PORT" variable nil (reparse-symbol indented_block_body) [227 278])
+                    ("MAIL_USE_TLS" code nil (reparse-symbol indented_block_body) [283 377])
+                    ("MAIL_USERNAME" variable nil (reparse-symbol indented_block_body) [382 429])
+                    ("MAIL_PASSWORD" variable nil (reparse-symbol indented_block_body) [434 481])
+                    ("FLASKY_MAIL_SUBJECT_PREFIX" variable nil (reparse-symbol indented_block_body) [486 525])
+                    ("FLASKY_MAIL_SENDER" variable nil (reparse-symbol indented_block_body) [530 586])
+                    ("FLASKY_ADMIN" variable nil (reparse-symbol indented_block_body) [591 636])
+                    ("SQLALCHEMY_TRACK_MODIFICATIONS" variable nil (reparse-symbol indented_block_body) [641 679])
+                    ("init_app" function
+                       (:typemodifiers ("static")
+                        :arguments 
+                          ( ("app" variable nil (reparse-symbol function_parameters) [716 719]))                          
+                        :decorators 
+                          ( ("staticmethod" function (:type "decorator") nil nil))                          )
+                        (reparse-symbol indented_block_body) [685 735]))                  
+                :type "class")
+                nil [66 735])
+            ("DevelopmentConfig" type
+               (:superclasses ("Config")
+                :members 
+                  ( ("DEBUG" variable nil (reparse-symbol indented_block_body) [774 786])
+                    ("SQLALCHEMY_DATABASE_URI" code nil (reparse-symbol indented_block_body) [791 920]))                  
+                :type "class")
+                nil [737 921])
+            ("TestingConfig" type
+               (:superclasses ("Config")
+                :members 
+                  ( ("TESTING" variable nil (reparse-symbol indented_block_body) [956 970])
+                    ("SQLALCHEMY_DATABASE_URI" code nil (reparse-symbol indented_block_body) [975 1061]))                  
+                :type "class")
+                nil [923 1062])
+            ("ProductionConfig" type
+               (:superclasses ("Config")
+                :members 
+                  ( ("SQLALCHEMY_DATABASE_URI" code nil (reparse-symbol indented_block_body) [1100 1221]))                  
+                :type "class")
+                nil [1064 1222])
+            ("config" variable nil nil [1224 1374]))          
+      :file "config.py"
+      :pointmax 1375
+      :fsize 1374
+      :lastmodtime '(23092 57275 687929 908000)
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode python-mode
+      :tags 
+        '( ("os" include nil nil [1 10])
+            ("app" include nil nil [11 41])
+            ("app.models" include nil nil [42 75])
+            ("flask_script" include nil nil [76 115])
+            ("flask_migrate" include nil nil [116 165])
+            ("app" variable nil nil [167 223])
+            ("manager" variable nil nil [224 246])
+            ("migrate" variable nil nil [247 273])
+            ("make_shell_context" function nil nil [275 355])
+            ("manager" code nil nil [355 423])
+            ("manager" code nil nil [424 465])
+            ("if" code nil nil [467 508]))          
+      :file "manage.py"
+      :pointmax 508
+      :fsize 507
+      :lastmodtime '(23092 57662 711778 553000)
+      :unmatched-syntax nil))
+  :file "!Users!wang!Github!study_python!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

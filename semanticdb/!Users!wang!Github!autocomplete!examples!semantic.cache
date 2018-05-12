@@ -1,0 +1,47 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode html-mode
+      :tags 
+        '( ("auto complete demo" section nil nil [100 191])
+            ("auto complete" section (:members 
+              ( ("auto complete" section nil nil [243 410]))              ) nil [191 410])
+            ("var options = {
+    input_id: 'autocomplete_input',
+    data: ['aaa','abc','acc','dda'],
+    matchPattern: false
+}
+
+imwebAutoComplete(options);
+
+var options_1 = {
+    input_id: 'autocomplete_input_1',
+    data: ['aaa','abc','acc','dda'],
+    matchPattern: false
+}
+imwebAutoComplete(options_1);" section nil nil [410 473])
+            ("var options = {
+    input_id: 'autocomplete_input',
+    data: ['aaa','abc','acc','dda'],
+    matchPattern: false
+}
+
+imwebAutoComplete(options);
+
+var options_1 = {
+    input_id: 'autocomplete_input_1',
+    data: ['aaa','abc','acc','dda'],
+    matchPattern: false
+}
+imwebAutoComplete(options_1);" section nil nil [473 818]))          
+      :file "demo.html"
+      :pointmax 818
+      :fsize 817
+      :lastmodtime '(23057 52214 858098 987000)
+      :unmatched-syntax nil))
+  :file "!Users!wang!Github!autocomplete!examples!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

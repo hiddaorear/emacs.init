@@ -1,0 +1,18 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode html-mode
+      :tags 
+        '( ("Meadowlark Trael" section nil nil [35 75])
+            ("{{{body}}}" section nil nil [75 172]))          
+      :file "main.hbs"
+      :pointmax 172
+      :fsize 171
+      :lastmodtime '(23090 40226 760778 439000)
+      :unmatched-syntax nil))
+  :file "!Users!wang!Github!study_express!views!layouts!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

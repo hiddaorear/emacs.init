@@ -10,7 +10,7 @@
 (setq recentf-max-menu-item 10)
 
 ;; theme
-(load-theme 'solarized-dark t)
+(load-theme 'solarized-light t)
 
 ;; font
 ;; Setting English Font

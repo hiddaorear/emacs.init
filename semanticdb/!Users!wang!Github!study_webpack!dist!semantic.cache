@@ -1,0 +1,46 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode html-mode
+      :tags 
+        '( ("Caching" section nil nil [64 99])
+            ("" section nil nil [99 108])
+            ("" section nil nil [108 186])
+            ("" section nil nil [186 263])
+            ("" section nil nil [263 353]))          
+      :file "index.html"
+      :pointmax 353
+      :fsize 352
+      :lastmodtime '(23040 20145 695185 293000)
+      :unmatched-syntax nil)
+
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "runtime.5026cd626359ffbe5314.js"
+      :pointmax 5849
+      :fsize 5848
+      :lastmodtime '(23040 20145 695147 307000)
+      :unmatched-syntax '((PAREN_BLOCK 5844 . 5848) (PAREN_BLOCK 10 . 5759)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "vendor.41c0415d65fada1267bc.js"
+      :pointmax 541241
+      :fsize 541242
+      :lastmodtime '(23040 20145 695044 599000)
+      :unmatched-syntax '((CLOSE_PARENTHESIS 541239 . 541240) (CLOSE_SQ_BRACKETS 541238 . 541239) (OPEN_SQ_BRACKETS 541236 . 541237) (COMMA 541235 . 541236) (END_BLOCK 541234 . 541235) (CLOSE_PARENTHESIS 541231 . 541232) (END_BLOCK 541230 . 541231) (CLOSE_PARENTHESIS 541221 . 541222) (PAREN_BLOCK 541146 . 541221) (DOT 541141 . 541142) (PAREN_BLOCK 13 . 541141)))
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "main.159bc48ccc39f31cd36d.js"
+      :pointmax 780
+      :fsize 779
+      :lastmodtime '(23040 20145 695098 136000)
+      :unmatched-syntax '((PAREN_BLOCK 13 . 779))))
+  :file "!Users!wang!Github!study_webpack!dist!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

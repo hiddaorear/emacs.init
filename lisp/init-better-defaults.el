@@ -105,7 +105,7 @@
 (set-face-attribute 'fringe nil :foreground (background-color-at-point))
 
 
-;; bookmark
+;; bookmarks stuff
 (defadvice bookmark-jump (after bookmark-jump activate)
   (let ((latest (bookmark-get-bookmark bookmark)))
     (setq bookmark-alist (delq latest bookmark-alist))
@@ -120,7 +120,15 @@
 
 (setq bookmark-save-flag 1) ; everytime bookmark is changed, automatically save it
 (setq bookmark-save-flag t) ; save bookmark when emacs quits
-(setq bookmark-save-flag nil) ; never auto save.
+(setq bookmark-default-file "~/.emacs.d/bookmarks")  ;;define file to use.
+(setq bookmark-save-flag 1)  ;save bookmarks to .emacs.bmk after each entry
 
+(defun save-bookmark-as-last () 
+  (interactive)
+  (bookmark-set "last")
+  (message "Save as most recent bookmark.")
+)
+
+(global-set-key (kbd "C-x r s") 'save-bookmark-as-last)
 
 (provide 'init-better-defaults)

@@ -1,0 +1,22 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags 
+        '( ("removeNewUserLocalStorage" function nil nil [1460 1898])
+            ("setNewUserLocalStorage" function (:arguments 
+              ( ("store" variable nil (reparse-symbol FormalParameterList) [1932 1937]))              ) nil [1900 2316])
+            ("getNewUserLocalStorage" function nil nil [2318 2971])
+            ("postDraft" function (:arguments 
+              ( ("store" variable nil (reparse-symbol FormalParameterList) [2993 2998]))              ) nil [2973 3882]))          
+      :file "postDraft.js"
+      :pointmax 3980
+      :fsize 4015
+      :lastmodtime '(22985 3663 0 0)
+      :unmatched-syntax nil))
+  :file "!Users!wang!Jobs!ec_fe!src!my!crm!commonComponents!ManualInput!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

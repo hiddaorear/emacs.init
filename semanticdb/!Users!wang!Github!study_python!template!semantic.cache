@@ -1,0 +1,17 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode html-mode
+      :tags 
+        '( ("Hello, {% if name %}{{ name }}{% else %}Stranger{% endif %}" section nil nil [163 280]))          
+      :file "index.html"
+      :pointmax 280
+      :fsize 279
+      :lastmodtime '(23092 1363 470582 962000)
+      :unmatched-syntax nil))
+  :file "!Users!wang!Github!study_python!template!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

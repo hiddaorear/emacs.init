@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "RESTUrls.js"
+      :pointmax 1512
+      :fsize 1937
+      :lastmodtime '(23283 51714 111631 57000)
+      :unmatched-syntax nil))
+  :file "!Users!wang!Jobs!om!project_labeling!labeling!LabelingFrontEnd!src!utils!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
