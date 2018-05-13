@@ -21,6 +21,11 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
+;; Emacs minor mode that keeps your code always indented. More reliable than electric-indent-mode.
+;; aggressive-indent
+(global-aggressive-indent-mode 1)
+(add-to-list 'aggressive-indent-excluded-modes 'html-mode)
+
 
 ;; rjsx-mode
 (defadvice js-jsx-indent-line (after js-jsx-indent-line-after-hack activate)
