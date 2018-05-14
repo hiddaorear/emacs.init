@@ -24,15 +24,21 @@
 ;; Emacs minor mode that keeps your code always indented. More reliable than electric-indent-mode.
 ;; aggressive-indent
 (global-aggressive-indent-mode 1)
-(add-to-list 'aggressive-indent-excluded-modes 'html-mode)
 
+;; http://www.flycheck.org/manual/latest/index.html
+(require 'flycheck)
+;; turn on flychecking globally
+(add-hook 'after-init-hook #'global-flycheck-mode)
+;; customize flycheck temp file prefix
+(setq-default flycheck-temp-prefix ".flycheck")
 
-;; rjsx-mode
-(defadvice js-jsx-indent-line (after js-jsx-indent-line-after-hack activate)
-  "Workaround sgml-mode and follow airbnb component style."
-  (save-excursion
-    (beginning-of-line)
-    (if (looking-at-p "^ +\/?> *$")
-        (delete-char sgml-basic-offset))))
+;; turn on flychecking globally
+(add-hook 'after-init-hook #'global-flycheck-mode)
+
+;; https://github.com/purcell/exec-path-from-shell
+;; only need exec-path-from-shell on OSX
+;; this hopefully sets up path and other vars better
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
 
 (provide 'init-mode)

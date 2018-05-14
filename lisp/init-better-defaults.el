@@ -21,8 +21,6 @@
         tab-always-indent nil
         tab-width 4)
 (setq c-default-style "linux" c-basic-offset 4) ;; parentheses not retarct
-;;(setq c-default-style "ellemtel" c-basic-offset 4)
-(setq tab-width 4 indent-tabs-mode nil)
 
 
 (setq default-directory "~")
@@ -123,7 +121,7 @@
 (setq bookmark-default-file "~/.emacs.d/bookmarks")  ;;define file to use.
 (setq bookmark-save-flag 1)  ;save bookmarks to .emacs.bmk after each entry
 
-(defun save-bookmark-as-last () 
+(defun save-bookmark-as-last ()
   (interactive)
   (bookmark-set "last")
   (message "Save as most recent bookmark.")

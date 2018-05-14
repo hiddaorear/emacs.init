@@ -19,9 +19,10 @@
 
 ;; Package Management
 ;; -----------------------------------------------------------------
-(require 'init-packages)
-(require 'init-better-defaults)
+(require 'require-packages)
+(require 'init-web-packages)
 (require 'init-mode)
+(require 'init-better-defaults)
 (require 'init-helm)
 (require 'init-dired)
 ;;(require 'init-evil)
@@ -32,7 +33,3 @@
 (require 'init-avy)
 (require 'format-mode-line)
 (require 'init-powerline)
-
-
-(put 'upcase-region 'disabled nil)
-(put 'downcase-region 'disabled nil)

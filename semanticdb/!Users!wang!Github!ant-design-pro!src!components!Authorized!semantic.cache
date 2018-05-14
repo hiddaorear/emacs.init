@@ -1,0 +1,16 @@
+;; Object semanticdb-project-database-file
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "semanticdb-project-database-file"
+  :tables
+  (list
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "Authorized.js"
+      :pointmax 393
+      :fsize 392
+      :lastmodtime '(23287 52158 549976 685000)
+      :unmatched-syntax nil))
+  :file "!Users!wang!Github!ant-design-pro!src!components!Authorized!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
