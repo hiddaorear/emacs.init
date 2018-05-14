@@ -22,6 +22,7 @@
         tab-width 4)
 (setq c-default-style "linux" c-basic-offset 4) ;; parentheses not retarct
 
+(setq company-dabbrev-downcase nil)
 
 (setq default-directory "~")
 
