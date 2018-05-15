@@ -23,7 +23,7 @@
 
 ;; Emacs minor mode that keeps your code always indented. More reliable than electric-indent-mode.
 ;; aggressive-indent
-(global-aggressive-indent-mode 1)
+;;(global-aggressive-indent-mode 1)
 
 ;; http://www.flycheck.org/manual/latest/index.html
 (require 'flycheck)
