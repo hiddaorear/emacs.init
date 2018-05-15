@@ -33,15 +33,19 @@
                       smartparens
                       flycheck
                       undo-tree
-                      aggressive-indent
                       exec-path-from-shell
+                      ;; --- Vim ---
+                      evil-leader
+                      evil-nerd-commenter
+                      evil
+                      evil-anzu
                       ;; --- Major Mode ---
 
                       ;; --- Web ---
-                      js2-mode
                       web-mode
-                      rjsx-mode
+                      js2-mode
                       less-css-mode
+                      ;;rjsx-mode
                       ;; --- Minor Mode ---
                       nodejs-repl
                       ;; --- Themes ---

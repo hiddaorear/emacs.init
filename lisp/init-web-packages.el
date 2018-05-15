@@ -1,8 +1,19 @@
+;;; web-packages --- init web packages
+
+;;; init js2
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+(add-to-list 'interpreter-mode-alist '("node" . js2-mode))
+
+(add-hook 'js2-mode-hook (lambda () (setq js2-basic-offset 4)))
+(setq js2-bounce-indent-p t)
+
 ;; use web-mode for .jsx files
 (add-to-list 'auto-mode-alist '("\\.jsx$" . web-mode))
 
 ;; http://www.flycheck.org/manual/latest/index.html
 (require 'flycheck)
+;; turn on flychecking globally
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;; disable jshint since we prefer eslint checking
 (setq-default flycheck-disabled-checkers
@@ -12,6 +23,8 @@
 ;; use eslint with web-mode for jsx files
 (flycheck-add-mode 'javascript-eslint 'web-mode)
 
+;; customize flycheck temp file prefix
+(setq-default flycheck-temp-prefix ".flycheck")
 
 ;; disable json-jsonlist checking for json files
 (setq-default flycheck-disabled-checkers
@@ -31,8 +44,7 @@
       (setq-local flycheck-javascript-eslint-executable eslint))))
 (add-hook 'flycheck-mode-hook #'my/use-eslint-from-node-modules)
 
-
-;; adjust indents for web-mode to 4 spaces
+;; adjust indents for web-mode to 2 spaces
 (defun my-web-mode-hook ()
   "Hooks for Web mode. Adjust indents"
   ;;; http://web-mode.org/
@@ -48,12 +60,5 @@
     (let ((web-mode-enable-part-face nil))
       ad-do-it)
     ad-do-it))
-
-(defadvice js-jsx-indent-line (after js-jsx-indent-line-after-hack activate)
-  "Workaround sgml-mode and follow airbnb component style."
-  (save-excursion
-    (beginning-of-line)
-    (if (looking-at-p "^ +\/?> *$")
-        (delete-char sgml-basic-offset))))
 
 (provide 'init-web-packages)

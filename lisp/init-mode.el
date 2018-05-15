@@ -21,10 +21,6 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
-;; Emacs minor mode that keeps your code always indented. More reliable than electric-indent-mode.
-;; aggressive-indent
-;;(global-aggressive-indent-mode 1)
-
 ;; http://www.flycheck.org/manual/latest/index.html
 (require 'flycheck)
 ;; turn on flychecking globally
@@ -40,5 +36,10 @@
 ;; this hopefully sets up path and other vars better
 (when (memq window-system '(mac ns))
   (exec-path-from-shell-initialize))
+
+;; imenu
+(defun try-to-add-imenu ()
+  (condition-case nil (imenu-add-to-menubar "Imenu") (error nil)))
+(add-hook 'font-lock-mode-hook 'try-to-add-imenu)
 
 (provide 'init-mode)
