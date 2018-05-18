@@ -21,8 +21,15 @@
 (require 'undo-tree)
 (global-undo-tree-mode)
 
+;; https://github.com/purcell/exec-path-from-shell
+;; only need exec-path-from-shell on OSX
+;; this hopefully sets up path and other vars better
+(when (memq window-system '(mac ns))
+  (exec-path-from-shell-initialize))
+
 ;; http://www.flycheck.org/manual/latest/index.html
 (require 'flycheck)
+(global-flycheck-mode)
 ;; turn on flychecking globally
 (add-hook 'after-init-hook #'global-flycheck-mode)
 ;; customize flycheck temp file prefix
@@ -31,11 +38,7 @@
 ;; turn on flychecking globally
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
-;; https://github.com/purcell/exec-path-from-shell
-;; only need exec-path-from-shell on OSX
-;; this hopefully sets up path and other vars better
-(when (memq window-system '(mac ns))
-  (exec-path-from-shell-initialize))
+
 
 ;; imenu
 (defun try-to-add-imenu ()

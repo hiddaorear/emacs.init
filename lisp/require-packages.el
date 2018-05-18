@@ -42,10 +42,10 @@
                       ;; --- Major Mode ---
 
                       ;; --- Web ---
-                      web-mode
+                      ;;web-mode
                       js2-mode
                       less-css-mode
-                      ;;rjsx-mode
+                      rjsx-mode
                       ;; --- Minor Mode ---
                       nodejs-repl
                       ;; --- Themes ---
