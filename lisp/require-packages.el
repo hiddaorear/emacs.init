@@ -24,6 +24,7 @@
                       company
                       ;; --- Better Editor ---
                       helm
+                      helm-ag
                       which-key
                       avy
                       dired+
