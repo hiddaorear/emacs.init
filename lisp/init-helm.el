@@ -38,6 +38,7 @@
 (global-set-key (kbd "C-c i") 'helm-semantic-or-imenu)
 (global-set-key (kbd "C-c s") 'helm-occur)
 (global-set-key (kbd "C-h SPC") 'helm-all-mark-rings)
+(global-set-key (kbd "C-c a") 'helm-ag)
 
 (setq helm-split-window-in-side-p           t ; open helm buffer inside current window, not occupy whole other window
       helm-move-to-line-cycle-in-source     t ; move to end or beginning of source when reaching top or bottom of source.
