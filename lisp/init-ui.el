@@ -5,7 +5,6 @@
 (switch-to-buffer "*Bookmark List*")
 
 ;; setq
-(setq-default cursor-type 'bar)
 (setq initial-frame-alist (quote ((fullscreen . maximized))))
 (setq recentf-max-menu-item 10)
 

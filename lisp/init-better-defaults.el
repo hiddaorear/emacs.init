@@ -26,6 +26,12 @@
 
 (setq default-directory "~")
 
+;; cursor
+(blink-cursor-mode -1)
+
+(setq ring-bell-function 'ignore)
+
+
 (global-auto-revert-mode t)
 
 (fset 'yes-or-no-p 'y-or-n-p)
