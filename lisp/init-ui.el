@@ -39,7 +39,7 @@
 
 ;; line and column
 (column-number-mode t) ;; column number on bar
-(setq default-fill-column 80) ;; max column is 66
+(setq default-fill-column 80) ;; max column is 80
 (global-linum-mode 1) ;; line number on margin
 (line-number-mode t) ;; line number on bar
 
