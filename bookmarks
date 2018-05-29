@@ -2,7 +2,17 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("labeling"
+(("labeling_front_end"
+ (filename . "~/Jobs/om/project_labeling/labeling/LabelingFrontEnd/")
+ (front-context-string . "node_modules\n  d")
+ (rear-context-string . "3K Apr  2 13:20 ")
+ (position . 400))
+("todlist"
+ (filename . "~/Jobs/om/")
+ (front-context-string . "todolist\n  -rw-r")
+ (rear-context-string . "8B May  2 18:50 ")
+ (position . 658))
+("labeling"
  (filename . "~/Jobs/om/project_labeling/labeling/")
  (front-context-string . ".git\n  drwxr-xr-")
  (rear-context-string . "2B May 12 19:58 ")
@@ -17,9 +27,4 @@
  (front-context-string . "\nclass ImageTask")
  (rear-context-string . "= Tabs.TabPane;\n")
  (position . 305))
-("todlist"
- (filename . "~/Jobs/om/")
- (front-context-string . "todolist\n  -rw-r")
- (rear-context-string . "8B May  2 18:50 ")
- (position . 658))
 )
