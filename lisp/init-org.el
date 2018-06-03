@@ -1,6 +1,8 @@
 (require 'org)
 (require 'org-install)
 (require 'ob-tangle)
+(eval-after-load "org"
+  '(require 'ox-md nil t))
 (setq org-src-fontify-natively t)
 
 (setq org-hide-leading-stars t)

@@ -42,6 +42,9 @@
                       evil-anzu
                       ;; --- Major Mode ---
 
+                      ;; --- markdown-mode ---
+                      markdown-mode
+
                       ;; --- Web ---
                       ;;web-mode
                       js2-mode
