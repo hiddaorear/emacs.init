@@ -256,6 +256,14 @@
 (when (boundp 'x-gtk-use-system-tooltips)
   (setq x-gtk-use-system-tooltips nil))
 
+;; font
+(progn
+  (set-default-font "YaHei Consolas Hybrid-18"))
+
+;; 避免中文输入法冲突
+(global-set-key (kbd "C-SPC") nil)
+
+
 (provide 'init-ui)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
