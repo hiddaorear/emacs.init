@@ -13,6 +13,10 @@
 
 ### 全局搜索
 
+ivy使用
+
+[ag 搜索与替换](https://zhuanlan.zhihu.com/p/22687261)
+
 
 ### 单个文件内搜索
 
@@ -47,6 +51,10 @@
 
 
 # 额外依赖包
+
+[ag](https://github.com/ggreer/the_silver_searcher)
+
+[rg](https://github.com/BurntSushi/ripgrep)
 
 
 ## 参考资料
