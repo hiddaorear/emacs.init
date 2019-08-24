@@ -56,6 +56,7 @@ ivy使用
 
 [rg](https://github.com/BurntSushi/ripgrep)
 
+[YaHei-Consolas-Hybrid](https://github.com/yakumioto/YaHei-Consolas-Hybrid-1.12)
 
 ## 参考资料
 
