@@ -49,6 +49,18 @@ ivy使用
 
 ### 翻译
 
+# 问题
+
+## 无法使用中文输入法
+
+简单无副作用的办法： 命令行使用`LC_CTYPE=zh_CN.UTF-8 emacs`启动即可。设置别名`alias emacs="LC_CTYPE=zh_CN.UTF-8 emacs"`
+
+点击图标启动emacs，则需要替换emacs的启动文件。在/usr/share/applications/下面`emacs.desktop`文件。
+
+启动文件中添加 `Exec=env LC_CTYPE=zh_CN.UTF-8 /usr/bin/emacs25 %F`，其中`env LC_CTYPE=zh_CN.UTF-8 `是新增内容。
+
+其他修改系统配置的办法，非常麻烦，而且不一定生效。
+
 
 # 额外依赖包
 
