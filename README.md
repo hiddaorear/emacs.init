@@ -49,6 +49,11 @@
 # 额外依赖包
 
 
+## 参考资料
+
+[Lisp之根源](http://daiyuwen.freeshell.org/gb/rol/roots_of_lisp.html)
+
+
 
 ## change log
 
