@@ -56,9 +56,9 @@
 
 ;; Browse the homepage
 (defun browse-homepage ()
-  "Browse the Github page of shixia Emacs."
+  "Browse the Github page of ginkgo Emacs."
   (interactive)
-  (browse-url shixia-homepage))
+  (browse-url ginkgo-homepage))
 
 ;; Open custom file
 (defun open-custom-file()
@@ -74,7 +74,7 @@
 
 ;; Update
 (defun update-config ()
-  "Update shixia Emacs configurations to the latest version."
+  "Update ginkgo Emacs configurations to the latest version."
   (interactive)
   (let ((dir (expand-file-name user-emacs-directory)))
     (if (file-exists-p dir)
@@ -84,10 +84,10 @@
           (shell-command "git pull")
           (message "Update finished. Restart Emacs to complete the process."))
       (message "\"%s\" doesn't exist." dir))))
-(defalias 'shixia-update-config 'update-config)
+(defalias 'ginkgo-update-config 'update-config)
 
 (declare-function upgrade-packages 'init-package)
-(defun shixia-update-packages ()
+(defun ginkgo-update-packages ()
   "Refresh package contents and upgrade all packages."
   (interactive)
   (package-refresh-contents)
@@ -97,8 +97,8 @@
   "Update confgiurations and packages."
   (interactive)
   (update-config)
-  (shixia-update-packages))
-(defalias 'shixia-update 'update-config-and-packages)
+  (ginkgo-update-packages))
+(defalias 'ginkgo-update 'update-config-and-packages)
 
 (defun update-all()
   "Update dotfiles, org files, Emacs confgiurations and packages to the latest versions ."
@@ -106,7 +106,7 @@
   (update-org)
   (update-dotfiles)
   (update-config-and-packages))
-(defalias 'shixia-update-all 'update-all)
+(defalias 'ginkgo-update-all 'update-all)
 
 (defun update-dotfiles ()
   "Update the dotfiles to the latest version."
@@ -120,7 +120,7 @@
           (shell-command "git pull")
           (message "Update finished."))
       (message "\"%s\" doesn't exist." dir))))
-(defalias 'shixia-update-dotfiles 'update-dotfiles)
+(defalias 'ginkgo-update-dotfiles 'update-dotfiles)
 
 (defun update-org ()
   "Update Org files to the latest version."
@@ -133,7 +133,7 @@
           (shell-command "git pull")
           (message "Update finished."))
       (message "\"%s\" doesn't exist." dir))))
-(defalias 'shixia-update-org 'update-org)
+(defalias 'ginkgo-update-org 'update-org)
 
 (defun create-scratch-buffer ()
   "Create a scratch buffer."
@@ -179,7 +179,7 @@
   (run-hooks 'after-load-theme-hook))
 (advice-add #'load-theme :after #'run-after-load-theme-hook)
 
-(defun shixia--standardize-theme (theme)
+(defun ginkgo--standardize-theme (theme)
   "Standardize THEME."
   (pcase theme
     ('default 'doom-one)
@@ -189,17 +189,17 @@
     ('daylight 'doom-tomorrow-day)
     (_ (or theme 'doom-one))))
 
-(defun shixia-compatible-theme-p (theme)
+(defun ginkgo-compatible-theme-p (theme)
   "Check if the THEME is compatible. THEME is a symbol."
-  (string-prefix-p "doom" (symbol-name (shixia--standardize-theme theme))))
+  (string-prefix-p "doom" (symbol-name (ginkgo--standardize-theme theme))))
 
-(defun shixia-load-theme (theme)
+(defun ginkgo-load-theme (theme)
   "Set color THEME."
   (interactive
    (list
     (intern (completing-read "Load theme: "
                              '(default classic dark light daylight)))))
-  (let ((theme (shixia--standardize-theme theme)))
+  (let ((theme (ginkgo--standardize-theme theme)))
     (mapc #'disable-theme custom-enabled-themes)
     (load-theme theme t)))
 
@@ -219,7 +219,7 @@
   "Show HTTP/HTTPS proxy."
   (interactive)
   (if url-proxy-services
-      (message "Current HTTP proxy is \"%s\"" shixia-proxy)
+      (message "Current HTTP proxy is \"%s\"" ginkgo-proxy)
     (message "No HTTP proxy")))
 
 
@@ -227,8 +227,8 @@
 (defun proxy-http-enable ()
   "Enable HTTP/HTTPS proxy."
   (interactive)
-  (setq url-proxy-services `(("http" . ,shixia-proxy)
-                             ("https" . ,shixia-proxy)
+  (setq url-proxy-services `(("http" . ,ginkgo-proxy)
+                             ("https" . ,ginkgo-proxy)
                              ("no_proxy" . "^\\(localhost\\|192.168.*\\|10.*\\)")))
   (proxy-http-show))
 

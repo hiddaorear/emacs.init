@@ -330,7 +330,7 @@
   (face-spec-reset-face 'origami-fold-header-face)
 
   ;; Support LSP
-  (when shixia-lsp
+  (when ginkgo-lsp
     (use-package lsp-origami
       :hook (origami-mode . (lambda ()
                               (if (bound-and-true-p lsp-mode)

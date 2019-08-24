@@ -17,8 +17,8 @@
     (car (car (cdr x)))))
 
 ;; Personal information
-(setq user-full-name shixia-full-name)
-(setq user-mail-address shixia-mail-address)
+(setq user-full-name ginkgo-full-name)
+(setq user-mail-address ginkgo-mail-address)
 
 ;; Key Modifiers
 (with-no-warnings

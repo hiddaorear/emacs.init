@@ -8,34 +8,34 @@
 (eval-when-compile
   (require 'init-const))
 
-(defgroup shixia nil
-  "shixia Emacs customizations."
+(defgroup ginkgo nil
+  "ginkgo Emacs customizations."
   :group 'convenience
-  :link '(url-link :tag "Homepage" "https://github.com/seagle0128/.emacs.d"))
+  :link '(url-link :tag "Homepage" "https://github.com/hiddaorear/emacs.init"))
 
-(defcustom shixia-logo (expand-file-name "logo.png" user-emacs-directory)
-  "Set shixia logo. nil means official logo."
-  :group 'shixia
+(defcustom ginkgo-logo (expand-file-name "logo.png" user-emacs-directory)
+  "Set ginkgo logo. nil means official logo."
+  :group 'ginkgo
   :type 'string)
 
-(defcustom shixia-full-name "Vincent Zhang"
+(defcustom ginkgo-full-name "shixia ginkgo"
   "Set user full name."
-  :group 'shixia
+  :group 'ginkgo
   :type 'string)
 
-(defcustom shixia-mail-address "seagle0128@gmail.com"
+(defcustom ginkgo-mail-address "hiddaorear@outlook.com"
   "Set user email address."
-  :group 'shixia
+  :group 'ginkgo
   :type 'string)
 
-(defcustom shixia-proxy "127.0.0.1:1087"
+(defcustom ginkgo-proxy "127.0.0.1:1087"
   "Set network proxy."
-  :group 'shixia
+  :group 'ginkgo
   :type 'string)
 
-(defcustom shixia-package-archives 'melpa
+(defcustom ginkgo-package-archives 'melpa
   "Set package archives from which to fetch."
-  :group 'shixia
+  :group 'ginkgo
   :type '(choice
           (const :tag "Melpa" melpa)
           (const :tag "Melpa Mirror" melpa-mirror)
@@ -44,9 +44,9 @@
           (const :tag "Tencent" tencent)
           (const :tag "Tuna" tuna)))
 
-(defcustom shixia-theme 'default
+(defcustom ginkgo-theme 'default
   "Set color theme."
-  :group 'shixia
+  :group 'ginkgo
   :type '(choice
           (const :tag "Default theme" default)
           (const :tag "Classic theme" classic)
@@ -55,28 +55,28 @@
           (const :tag "Daylight theme" daylight)
           symbol))
 
-(defcustom shixia-dashboard t
+(defcustom ginkgo-dashboard t
   "Use dashboard at startup or not.
 If Non-nil, use dashboard, otherwise will restore previous session."
-  :group 'shixia
+  :group 'ginkgo
   :type 'boolean)
 
-(defcustom shixia-lsp 'lsp-mode
+(defcustom ginkgo-lsp 'lsp-mode
   "Set language server."
-  :group 'shixia
+  :group 'ginkgo
   :type '(choice
           (const :tag "LSP Mode" 'lsp-mode)
           (const :tag "eglot" 'eglot)
           nil))
 
-(defcustom shixia-chinese-calendar t
+(defcustom ginkgo-chinese-calendar t
   "Use Chinese calendar or not."
-  :group 'shixia
+  :group 'ginkgo
   :type 'boolean)
 
-(defcustom shixia-benchmark nil
+(defcustom ginkgo-benchmark nil
   "Enable the init benchmark or not."
-  :group 'shixia
+  :group 'ginkgo
   :type 'boolean)
 
 ;; Load `custom-file'

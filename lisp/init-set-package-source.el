@@ -47,7 +47,7 @@
   (message "Set package archives to `%s'." archives))
 
 
-(set-package-archives shixia-package-archives)
+(set-package-archives ginkgo-package-archives)
 
 ;; Initialize packages
 (unless (bound-and-true-p package--initialized) ; To avoid warnings in 27
@@ -77,7 +77,7 @@
 (use-package gnu-elpa-keyring-update)
 
 ;; Initialization benchmark
-(when shixia-benchmark
+(when ginkgo-benchmark
   (use-package benchmark-init
     :defines swiper-font-lock-exclude
     :commands (benchmark-init/activate)

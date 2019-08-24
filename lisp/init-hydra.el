@@ -16,7 +16,7 @@
              hydra-set-transient-map))
 
 (use-package pretty-hydra
-  :functions set-package-archives shixia-load-theme
+  :functions set-package-archives ginkgo-load-theme
   :bind ("<f6>" . toggles-hydra/body)
   :init
   (cl-defun pretty-hydra-title (title &optional icon-type icon-name
@@ -70,37 +70,37 @@
       ("m" diff-hl-margin-mode "margin gutter" :toggle t)
       ("E" diff-hl-dired-mode "dired gutter" :toggle t))
      "Theme"
-     (("d" (shixia-load-theme 'default) "default"
-       :toggle (eq (centuar-current-theme) (shixia--standardize-theme 'default)))
-      ("c" (shixia-load-theme 'classic) "classic"
-       :toggle (eq (centuar-current-theme) (shixia--standardize-theme 'classic)))
-      ("g" (shixia-load-theme 'light) "light"
-       :toggle (eq (centuar-current-theme) (shixia--standardize-theme 'light)))
-      ("y" (shixia-load-theme 'daylight) "daylight"
-       :toggle (eq (centuar-current-theme) (shixia--standardize-theme 'daylight)))
+     (("d" (ginkgo-load-theme 'default) "default"
+       :toggle (eq (centuar-current-theme) (ginkgo--standardize-theme 'default)))
+      ("c" (ginkgo-load-theme 'classic) "classic"
+       :toggle (eq (centuar-current-theme) (ginkgo--standardize-theme 'classic)))
+      ("g" (ginkgo-load-theme 'light) "light"
+       :toggle (eq (centuar-current-theme) (ginkgo--standardize-theme 'light)))
+      ("y" (ginkgo-load-theme 'daylight) "daylight"
+       :toggle (eq (centuar-current-theme) (ginkgo--standardize-theme 'daylight)))
       ("M" doom-modeline-mode "modern mode-line" :toggle t)
       ("T" (let ((ivy-initial-inputs-alist '((counsel-load-theme . "doom-"))))
              (counsel-load-theme))
        "others"))
      "Package Archive"
-     (("k m" (progn (setq shixia-package-archives 'melpa)
-                    (set-package-archives shixia-package-archives))
-       "melpa" :toggle (eq shixia-package-archives 'melpa))
-      ("k i" (progn (setq shixia-package-archives 'melpa-mirror)
-                    (set-package-archives shixia-package-archives))
-       "melpa mirror" :toggle (eq shixia-package-archives 'melpa-mirror))
-      ("k c" (progn (setq shixia-package-archives 'emacs-china)
-                    (set-package-archives shixia-package-archives))
-       "emacs china" :toggle (eq shixia-package-archives 'emacs-china))
-      ("k n" (progn (setq shixia-package-archives 'netease)
-                    (set-package-archives shixia-package-archives))
-       "netease" :toggle (eq shixia-package-archives 'netease))
-      ("k t" (progn (setq shixia-package-archives 'tencent)
-                    (set-package-archives shixia-package-archives))
-       "tencent" :toggle (eq shixia-package-archives 'tencent))
-      ("k u" (progn (setq shixia-package-archives 'tuna)
-                    (set-package-archives shixia-package-archives))
-       "tuna" :toggle (eq shixia-package-archives 'tuna))))))
+     (("k m" (progn (setq ginkgo-package-archives 'melpa)
+                    (set-package-archives ginkgo-package-archives))
+       "melpa" :toggle (eq ginkgo-package-archives 'melpa))
+      ("k i" (progn (setq ginkgo-package-archives 'melpa-mirror)
+                    (set-package-archives ginkgo-package-archives))
+       "melpa mirror" :toggle (eq ginkgo-package-archives 'melpa-mirror))
+      ("k c" (progn (setq ginkgo-package-archives 'emacs-china)
+                    (set-package-archives ginkgo-package-archives))
+       "emacs china" :toggle (eq ginkgo-package-archives 'emacs-china))
+      ("k n" (progn (setq ginkgo-package-archives 'netease)
+                    (set-package-archives ginkgo-package-archives))
+       "netease" :toggle (eq ginkgo-package-archives 'netease))
+      ("k t" (progn (setq ginkgo-package-archives 'tencent)
+                    (set-package-archives ginkgo-package-archives))
+       "tencent" :toggle (eq ginkgo-package-archives 'tencent))
+      ("k u" (progn (setq ginkgo-package-archives 'tuna)
+                    (set-package-archives ginkgo-package-archives))
+       "tuna" :toggle (eq ginkgo-package-archives 'tuna))))))
 
 (provide 'init-hydra)
 

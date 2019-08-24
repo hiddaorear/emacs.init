@@ -5,9 +5,9 @@
 
 ;;; Code:
 
-(defconst shixia-homepage
+(defconst ginkgo-homepage
   "https://github.com/hiddaorear/emacs.init"
-  "The Github page of shixia Emacs.")
+  "The Github page of ginkgo Emacs.")
 
 (defconst sys/win32p
   (eq system-type 'windows-nt)

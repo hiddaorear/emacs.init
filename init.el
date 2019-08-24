@@ -5,26 +5,26 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-(setq user-full-name "shixia")
-(defvar shixia-gc-cons-threshold (if (display-graphic-p) 8000000 800000)
+(setq user-full-name "ginkgo")
+(defvar ginkgo-gc-cons-threshold (if (display-graphic-p) 8000000 800000)
   "The default value to use for `gc-cons-threshold'. If you experience freezing,
 decrease this. If you experience stuttering, increase this.")
 
-(defvar shixia-gc-cons-upper-limit (if (display-graphic-p) 400000000 100000000)
+(defvar ginkgo-gc-cons-upper-limit (if (display-graphic-p) 400000000 100000000)
   "The temporary value for `gc-cons-threshold' to defer it.")
 
-(defvar shixia-gc-timer (run-with-idle-timer 10 t #'garbage-collect)
+(defvar ginkgo-gc-timer (run-with-idle-timer 10 t #'garbage-collect)
   "Run garbarge collection when idle 10s.")
 
 (defvar default-file-name-handler-alist file-name-handler-alist)
 
 (setq file-name-handler-alist nil)
-(setq gc-cons-threshold shixia-gc-cons-upper-limit)
+(setq gc-cons-threshold ginkgo-gc-cons-upper-limit)
 (add-hook 'emacs-startup-hook
           (lambda ()
             "Restore defalut values after startup."
             (setq file-name-handler-alist default-file-name-handler-alist)
-            (setq gc-cons-threshold shixia-gc-cons-threshold)
+            (setq gc-cons-threshold ginkgo-gc-cons-threshold)
 
             ;; GC automatically while unfocusing the frame
             ;; `focus-out-hook' is obsolete since 27.1
@@ -38,10 +38,10 @@ decrease this. If you experience stuttering, increase this.")
             ;; Avoid GCs while using `ivy'/`counsel'/`swiper' and `helm', etc.
             ;; @see http://bling.github.io/blog/2016/01/18/why-are-you-changing-gc-cons-threshold/
             (defun my-minibuffer-setup-hook ()
-              (setq gc-cons-threshold shixia-gc-cons-upper-limit))
+              (setq gc-cons-threshold ginkgo-gc-cons-upper-limit))
 
             (defun my-minibuffer-exit-hook ()
-              (setq gc-cons-threshold shixia-gc-cons-threshold))
+              (setq gc-cons-threshold ginkgo-gc-cons-threshold))
 
             (add-hook 'minibuffer-setup-hook #'my-minibuffer-setup-hook)
             (add-hook 'minibuffer-exit-hook #'my-minibuffer-exit-hook)))
@@ -80,3 +80,4 @@ decrease this. If you experience stuttering, increase this.")
 (require 'init-ui)
 (require 'init-edit)
 (require 'init-ivy)
+(require 'init-evil)

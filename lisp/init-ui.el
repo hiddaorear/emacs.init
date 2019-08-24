@@ -10,14 +10,14 @@
   (require 'init-custom))
 
 ;; Suppress warnings in hydra
-(declare-function shixia-compatible-theme-p 'init-funcs)
-(declare-function shixia-load-theme 'init-funcs)
+(declare-function ginkgo-compatible-theme-p 'init-funcs)
+(declare-function ginkgo-load-theme 'init-funcs)
 
 ;; Logo
-(setq fancy-splash-image shixia-logo)
+(setq fancy-splash-image ginkgo-logo)
 
 ;; Title
-(setq frame-title-format '("shixia Emacs - %b")
+(setq frame-title-format '("ginkgo Emacs - %b")
       icon-title-format frame-title-format)
 
 (when sys/mac-x-p
@@ -37,7 +37,7 @@
   (push '(vertical-scroll-bars) default-frame-alist))
 
 ;; Theme
-(if (shixia-compatible-theme-p shixia-theme)
+(if (ginkgo-compatible-theme-p ginkgo-theme)
     (progn
       (use-package doom-themes
         :defines doom-themes-treemacs-theme
@@ -45,7 +45,7 @@
                                     (set-face-foreground
                                      'mode-line
                                      (face-foreground 'default))))
-        :init (shixia-load-theme shixia-theme)
+        :init (ginkgo-load-theme ginkgo-theme)
         :config
         ;; FIXME: @see https://github.com/hlissner/emacs-doom-themes/issues/317.
         (set-face-foreground 'mode-line (face-foreground 'default))
@@ -81,8 +81,8 @@
         (advice-add #'persp-load-state-from-file
                     :after #'solaire-mode-restore-persp-mode-buffers)))
   (progn
-    (warn "The current theme may not be compatible with shixia!")
-    (shixia-load-theme shixia-theme)))
+    (warn "The current theme may not be compatible with ginkgo!")
+    (ginkgo-load-theme ginkgo-theme)))
 
 ;; Mode-line
 (use-package doom-modeline
