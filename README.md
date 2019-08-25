@@ -5,7 +5,6 @@
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **目录**
 
-- [配置](#配置)
     - [原则](#原则)
     - [搜索](#搜索)
         - [全局搜索](#全局搜索)
@@ -32,9 +31,8 @@
     - [额外依赖包](#额外依赖包)
     - [参考资料](#参考资料)
     - [change log](#change log)
-<!-- markdown-toc end -->
 
-# 配置
+<!-- markdown-toc end -->
 
 ## 原则
 
