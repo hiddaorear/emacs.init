@@ -1,4 +1,38 @@
-# emacs使用
+# ginkgo emacs
+
+![ginkgo](log.png)
+
+<!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
+**Table of Contents**
+
+- [配置](#配置)
+    - [原则](#原则)
+    - [搜索](#搜索)
+        - [全局搜索](#全局搜索)
+        - [单个文件内搜索](#单个文件内搜索)
+        - [以搜索作为大范围光标移动的方式](#以搜索作为大范围光标移动的方式)
+    - [补全](#补全)
+        - [代码补全](#代码补全)
+        - [company](#company)
+        - [yasnippet](#yasnippet)
+        - [文件路径补全](#文件路径补全)
+    - [代码检查](#代码检查)
+        - [拼写检查](#拼写检查)
+        - [lint的设置](#lint的设置)
+    - [常用编辑功能](#常用编辑功能)
+        - [文件操作](#文件操作)
+        - [dired](#dired)
+        - [光标移动](#光标移动)
+        - [代码段](#代码段)
+        - [格式化](#格式化)
+        - [翻译](#翻译)
+    - [问题](#问题)
+        - [无法使用中文输入法](#无法使用中文输入法)
+    - [todo](#todo)
+    - [额外依赖包](#额外依赖包)
+    - [参考资料](#参考资料)
+    - [change log](#change log)
+<!-- markdown-toc end -->
 
 # 配置
 
@@ -94,7 +128,7 @@ ivy使用
 
 
 
-# 额外依赖包
+## 额外依赖包
 
 [ag](https://github.com/ggreer/the_silver_searcher)
 
