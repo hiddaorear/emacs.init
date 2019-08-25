@@ -260,7 +260,7 @@
 (progn
   (set-default-font "YaHei Consolas Hybrid-18"))
 
-;; 避免中文输入法冲突
+;; 避免中文输入法快捷键冲突
 (global-set-key (kbd "C-SPC") nil)
 
 

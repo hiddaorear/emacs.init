@@ -66,19 +66,26 @@ decrease this. If you experience stuttering, increase this.")
 (update-load-path)
 
 ;; -----------------------------------------------------------------
-;; Constants
+;; Constant
 (require 'init-const)
 ;; Customization
 (require 'init-custom)
 ;; package
 (require 'init-set-package-source)
 
-;; Preferences
+;;;; Preferences
+;; elementary
 (require 'init-base)
 (require 'init-funcs)
+
+;; UI
 (require 'init-hydra)
 (require 'init-ui)
+
+;; enhanced
 (require 'init-edit)
 (require 'init-ivy)
 (require 'init-evil)
 (require 'init-dired)
+
+;;;;
