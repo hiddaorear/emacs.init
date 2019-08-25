@@ -1,6 +1,6 @@
 # ginkgo emacs
 
-![ginkgo](log.png)
+![ginkgo](./logo.png)
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **Table of Contents**
@@ -113,6 +113,7 @@ ivy使用
 
 ## todo
 
+- magit
 - yasnippet
 - elisp
 - flycheck
