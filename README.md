@@ -41,6 +41,16 @@ ivy使用
 
 ## 常用编辑功能
 
+### 文件操作
+
+`C-x C-f` 打开文件或新建文件
+
+#### dired
+
+`C-x d`打开dried。
+
+[Emacs文件管理神器--dired常用操作说明](http://blog.lujun9972.win/blog/2016/12/10/emacs%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8--dired%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/)
+
 ### 光标移动
 
 ### 代码段
