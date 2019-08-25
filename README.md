@@ -3,7 +3,7 @@
 ![ginkgo](./logo.png)
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
-**Table of Contents**
+**目录**
 
 - [配置](#配置)
     - [原则](#原则)
@@ -139,8 +139,11 @@ ivy使用
 
 ## 参考资料
 
-[Lisp之根源](http://daiyuwen.freeshell.org/gb/rol/roots_of_lisp.html)
+[Centaur Emacs](https://github.com/seagle0128/.emacs.d)
 
+[Doom Emacs](https://github.com/hlissner/doom-emacs)
+
+[Lisp之根源](http://daiyuwen.freeshell.org/gb/rol/roots_of_lisp.html)
 
 
 ## change log
@@ -148,3 +151,4 @@ ivy使用
 - 2019//8/24 创建新版本
 - 2019//8/24 深夜，完成emacs的字体，evil，和输入法配置
 - 2019//8/25 下午，新增emacs插件，待研究日常使用方式，不合适则删除
+- 2019//8/25 下午，更新readme，记录日后要细究的内容。一步登天太难，虽然我vim和emacs都可以玩
