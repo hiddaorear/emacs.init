@@ -1,6 +1,5 @@
 # emacs使用
 
-
 # 配置
 
 ## 原则
@@ -28,10 +27,13 @@ ivy使用
 
 要做到抽象语法树的解析功能，正则补全太低级了。
 
-### company
-
-
 ### 代码补全
+
+#### company
+
+#### yasnippet
+
+[emacs yasnippet自定义模版配置与使用](http://www.fidding.me/article/18)
 
 ### 文件路径补全
 
@@ -75,6 +77,22 @@ ivy使用
 
 其他修改系统配置的办法，非常麻烦，而且不一定生效。
 
+## todo
+
+- yasnippet
+- elisp
+- flycheck
+- highlight
+- ibuffer
+- lsp
+- markdown
+- org
+- prog
+- utils
+- vcs
+- web
+
+
 
 # 额外依赖包
 
@@ -94,3 +112,4 @@ ivy使用
 
 - 2019//8/24 创建新版本
 - 2019//8/24 深夜，完成emacs的字体，evil，和输入法配置
+- 2019//8/25 下午，新增emacs插件，待研究日常使用方式，不合适则删除
