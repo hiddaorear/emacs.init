@@ -136,6 +136,12 @@ ivy使用
 
 [YaHei-Consolas-Hybrid](https://github.com/yakumioto/YaHei-Consolas-Hybrid-1.12)
 
+## todo
+
+[从doom emacs中学习快速启动](https://emacs-china.org/t/doom-emacs/10354)
+
+[技术人怎么领导一个开源社区？](https://manateelazycat.github.io/opensource/2019/08/03/how-open-source-works.html)
+
 ## 参考资料
 
 [Centaur Emacs](https://github.com/seagle0128/.emacs.d)
