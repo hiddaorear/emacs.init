@@ -88,4 +88,6 @@ decrease this. If you experience stuttering, increase this.")
 (require 'init-evil)
 (require 'init-dired)
 
+;; code
+(require 'init-company)
 ;;;;
