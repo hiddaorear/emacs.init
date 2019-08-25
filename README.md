@@ -4,6 +4,8 @@
 
 <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-refresh-toc -->
 **目录**
+
+- [ginkgo](#ginkgo)
     - [原则](#原则)
     - [搜索](#搜索)
         - [全局搜索](#全局搜索)
@@ -29,7 +31,7 @@
     - [todo](#todo)
     - [额外依赖包](#额外依赖包)
     - [参考资料](#参考资料)
-    - [change log](#change log)
+    - [change log](#change-log)
 
 <!-- markdown-toc end -->
 
