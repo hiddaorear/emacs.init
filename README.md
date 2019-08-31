@@ -34,6 +34,7 @@
         - [代码段](#代码段)
         - [格式化](#格式化)
         - [翻译](#翻译)
+    - [插件的使用](#插件的使用)
     - [问题](#问题)
         - [无法使用中文输入法](#无法使用中文输入法)
     - [todo](#todo)
@@ -53,13 +54,9 @@
 
 ### 全局搜索
 
-#### `swiper-isearch`
-
-`C-s`
-
 #### rg
 
-`C-c r`或者evil的leader的键：
+快捷键：`C-c r`或者evil的leader的键：
 
 ``` emacs-lisp
 (evil-leader/set-key
@@ -85,6 +82,15 @@
 
 ### 单个文件内搜索
 
+#### `swiper-isearch`
+
+快捷键：`C-s`
+
+优点：有mini buffer支持预览，查看搜索结果非常方便。适用于当前文件搜索。
+
+
+### 以搜索作为大范围光标移动的方式
+
 #### avy
 
 ``` emacs-lisp
@@ -96,7 +102,6 @@
 ```
 
 
-### 以搜索作为大范围光标移动的方式
 
 
 ## 补全
@@ -152,6 +157,32 @@
 
 ### 翻译
 
+## 插件的使用
+
+### pretty-hydra
+
+#### 功能
+
+简化按键的操作。
+
+#### 快捷键：`F6`
+
+### yasnippet
+
+#### 功能
+
+代码片段。
+
+#### 快捷键
+
+无。输入关键字即可触发自动补全。
+
+#### 新建snippet
+
+`M-x yas-new-snippet`
+
+
+
 # 问题
 
 ## 无法使用中文输入法
@@ -190,13 +221,10 @@ sudo apt install emacs26
 ## todo
 
 - magit
-- yasnippet
 - elisp
 - flycheck
 - highlight
-- ibuffer
 - lsp
-- markdown
 - org
 - prog
 - utils
