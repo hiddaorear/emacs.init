@@ -20,6 +20,7 @@
         - [拼写检查](#拼写检查)
         - [lint的设置](#lint的设置)
     - [常用编辑功能](#常用编辑功能)
+        - [局部替换或编辑](#局部替换或编辑)
         - [文件操作](#文件操作)
         - [dired](#dired)
         - [光标移动](#光标移动)
@@ -78,6 +79,11 @@ ivy使用
 ### lint的设置
 
 ## 常用编辑功能
+
+### 局部替换或编辑
+
+选择需要替换或编辑的区域，执行`narrow-to-region`，把文件截取了局部，然后可以在局部进行替换或编辑，不
+会影响整体文件，把影响限制在局部。编辑好之后，执行`widen`，回到整体文件。
 
 ### 文件操作
 
@@ -158,6 +164,12 @@ sudo apt install emacs26
 [rg](https://github.com/BurntSushi/ripgrep)
 
 [YaHei-Consolas-Hybrid](https://github.com/yakumioto/YaHei-Consolas-Hybrid-1.12)
+
+## todo
+
+[从doom emacs中学习快速启动](https://emacs-china.org/t/doom-emacs/10354)
+
+[技术人怎么领导一个开源社区？](https://manateelazycat.github.io/opensource/2019/08/03/how-open-source-works.html)
 
 ## 参考资料
 
