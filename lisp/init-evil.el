@@ -26,7 +26,7 @@
     ;; cursor
     (setq evil-move-cursor-back nil)
     (setq evil-emacs-state-cursor '("#92c48f" box))
-    (setq evil-normal-state-cursor '("orange" box))
+    ;;(setq evil-normal-state-cursor '("orange" box))
     (setq evil-visual-state-cursor '("green" box))
     (setq evil-insert-state-cursor '("#6785c5" bar))
     (setq evil-replace-state-cursor '("#be369c" bar))
