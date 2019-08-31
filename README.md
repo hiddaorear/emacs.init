@@ -12,6 +12,7 @@
             - [swiper-isearch](#swiper-isearch)
             - [rg](#rg)
             - [ag](#ag)
+            - [搜索之后批量修改Multi-editing](#搜索之后批量修改Multi-editing)
         - [单个文件内搜索](#单个文件内搜索)
             - [avy](#avy)
         - [以搜索作为大范围光标移动的方式](#以搜索作为大范围光标移动的方式)
@@ -73,6 +74,13 @@
 
 
 [ag 搜索与替换](https://zhuanlan.zhihu.com/p/22687261)
+
+#### 搜索之后批量修改Multi-editing
+
+- `counsel-ag`或者`cuonsel-rg`搜索需要替换的字符串
+- `ivy-occur`(`C-c C-o`)打开ivy-occur的buffer
+- `ivy-wgrep-change-to-wgrep-mode`(C-x C-q)，evil替换`:%s/pattern/replace/g`
+- `wgrep-finish-edit`保持使用`C-x C-s`，取消使用`C-c C-k`
 
 
 ### 单个文件内搜索
