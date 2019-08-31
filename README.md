@@ -9,7 +9,11 @@
     - [原则](#原则)
     - [搜索](#搜索)
         - [全局搜索](#全局搜索)
+            - [swiper-isearch](#swiper-isearch)
+            - [rg](#rg)
+            - [ag](#ag)
         - [单个文件内搜索](#单个文件内搜索)
+            - [avy](#avy)
         - [以搜索作为大范围光标移动的方式](#以搜索作为大范围光标移动的方式)
     - [补全](#补全)
         - [代码补全](#代码补全)
@@ -20,6 +24,8 @@
         - [拼写检查](#拼写检查)
         - [lint的设置](#lint的设置)
     - [常用编辑功能](#常用编辑功能)
+        - [buffer](#buffer)
+          - [ibuffer](#ibuffer)
         - [局部替换或编辑](#局部替换或编辑)
         - [文件操作](#文件操作)
         - [dired](#dired)
@@ -46,12 +52,40 @@
 
 ### 全局搜索
 
-ivy使用
+#### `swiper-isearch`
+
+`C-s`
+
+#### rg
+
+`C-c r`或者evil的leader的键：
+
+``` emacs-lisp
+(evil-leader/set-key
+          "r" 'counsel-rg
+          "a" 'avy-goto-char-2
+          )
+
+```
+
+
+#### ag
+
 
 [ag 搜索与替换](https://zhuanlan.zhihu.com/p/22687261)
 
 
 ### 单个文件内搜索
+
+#### avy
+
+``` emacs-lisp
+(("C-:" . avy-goto-char)
+         ("C-'" . avy-goto-char-2)
+         ("M-g f" . avy-goto-line)
+         ("M-g w" . avy-goto-word-1)
+         ("M-g e" . avy-goto-word-0))
+```
 
 
 ### 以搜索作为大范围光标移动的方式
@@ -79,6 +113,12 @@ ivy使用
 ### lint的设置
 
 ## 常用编辑功能
+
+### buffer
+
+#### ibuffer
+
+`C-x C-b`或者evil的leader的键`b`
 
 ### 局部替换或编辑
 
@@ -186,3 +226,4 @@ sudo apt install emacs26
 - 2019//8/24 深夜，完成emacs的字体，evil，和输入法配置
 - 2019//8/25 下午，新增emacs插件，待研究日常使用方式，不合适则删除
 - 2019//8/25 下午，更新readme，记录日后要细究的内容。一步登天太难，虽然我vim和emacs都可以玩
+- 2019//8/31 下午，更新evil配置，补全搜索文档
