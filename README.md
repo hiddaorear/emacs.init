@@ -185,6 +185,10 @@
 
 # 问题
 
+## 在终端中运行
+
+`emacs -nw`
+
 ## 无法使用中文输入法
 
 简单无副作用的办法： 命令行使用`LC_CTYPE=zh_CN.UTF-8 emacs`启动即可。设置别名`alias emacs="LC_CTYPE=zh_CN.UTF-8 emacs"`
