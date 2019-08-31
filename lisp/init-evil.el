@@ -24,9 +24,10 @@
     (setq evil-want-C-u-scroll t)
 
     ;; cursor
+    (setq evil-move-cursor-back nil)
     (setq evil-emacs-state-cursor '("#92c48f" box))
-    (setq evil-normal-state-cursor '("green" box))
-    (setq evil-visual-state-cursor '("orange" box))
+    (setq evil-normal-state-cursor '("orange" box))
+    (setq evil-visual-state-cursor '("green" box))
     (setq evil-insert-state-cursor '("#6785c5" bar))
     (setq evil-replace-state-cursor '("#be369c" bar))
     (setq evil-operator-state-cursor '("#d9ca65" hollow))
@@ -42,8 +43,9 @@
         (setq evil-leader/in-all-states t)
         ;; keyboard shortcuts
         (evil-leader/set-key
-          "a" 'counsel-ag
-          "j" 'ace-jump-mode
+          "r" 'counsel-rg
+          "a" 'avy-goto-char-2
+          "b" 'ibuffer
           "k" 'kill-this-buffer
           "w" 'save-buffer
           )))
