@@ -249,11 +249,15 @@ sudo apt install emacs26
 
 ## 参考资料
 
+[emacs document](http://blog.lujun9972.win/emacs-document/)
+
 [Centaur Emacs](https://github.com/seagle0128/.emacs.d)
 
 [Doom Emacs](https://github.com/hlissner/doom-emacs)
 
 [Lisp之根源](http://daiyuwen.freeshell.org/gb/rol/roots_of_lisp.html)
+
+[Ivy, Counsel and Swiper](https://writequit.org/denver-emacs/presentations/2017-04-11-ivy.html)
 
 
 ## change log
@@ -263,3 +267,4 @@ sudo apt install emacs26
 - 2019//8/25 下午，新增emacs插件，待研究日常使用方式，不合适则删除
 - 2019//8/25 下午，更新readme，记录日后要细究的内容。一步登天太难，虽然我vim和emacs都可以玩
 - 2019//8/31 下午，更新evil配置，补全搜索文档
+- 2019//8/31 下午，补全搜索的文档和snippet文档
