@@ -110,6 +110,29 @@ ivy使用
 
 其他修改系统配置的办法，非常麻烦，而且不一定生效。
 
+## Ubunut的emacs版本老旧(2019年默认是emacs 25，最新版本是26)
+
+emacs 25会自动在init.el中添加`(package-initialize)`，会影响启动速度。
+
+### 安装最新版本
+
+``` shell
+sudo add-apt-repository ppa:ubuntu-elisp/ppa
+sudo apt-get update
+sudo apt install emacs-snapshot
+```
+
+### 安装指定版本
+
+有时候没有最新版本，2019年8月份就没有emacs27，实际上此时27已经发布了。
+
+``` shell
+sudo apt remove --autoremove emacs25 emacs25-nox
+sudo add-apt-repository ppa:kelleyk/emacs
+sudo apt update
+sudo apt install emacs26
+```
+
 ## todo
 
 - magit
