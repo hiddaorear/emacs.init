@@ -1,11 +1,17 @@
+;;; Commentary:
+;;
+;;
 
-;; Added by Package.el.  This must come before configurations of
-;; installed packages.  Don't delete this line.  If you don't want it,
-;; just comment it out by adding a semicolon to the start of the line.
-;; You may delete these explanatory comments.
-(package-initialize)
+
+;;; Code:
 
 (setq user-full-name "ginkgo")
+
+(when (version< emacs-version "25.1")
+  (error "This requires Emacs 25.1 and above!"))
+
+(setq debug-on-error t)
+
 (defvar ginkgo-gc-cons-threshold (if (display-graphic-p) 8000000 800000)
   "The default value to use for `gc-cons-threshold'. If you experience freezing,
 decrease this. If you experience stuttering, increase this.")
@@ -71,7 +77,7 @@ decrease this. If you experience stuttering, increase this.")
 ;; Customization
 (require 'init-custom)
 ;; package
-(require 'init-set-package-source)
+(require 'init-package)
 
 ;;;; Preferences
 ;; elementary

@@ -23,6 +23,14 @@
     (setq evil-shift-round nil)
     (setq evil-want-C-u-scroll t)
 
+    ;; cursor
+    (setq evil-emacs-state-cursor '("#92c48f" box))
+    (setq evil-normal-state-cursor '("green" box))
+    (setq evil-visual-state-cursor '("orange" box))
+    (setq evil-insert-state-cursor '("#6785c5" bar))
+    (setq evil-replace-state-cursor '("#be369c" bar))
+    (setq evil-operator-state-cursor '("#d9ca65" hollow))
+
     ;; leader shortcuts
     ;; This has to be before we invoke evil-mode due to:
     ;; https://github.com/cofi/evil-leader/issues/10

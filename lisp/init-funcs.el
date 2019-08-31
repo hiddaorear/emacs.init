@@ -187,6 +187,7 @@
     ('dark 'doom-Iosvkem)
     ('light 'doom-one-light)
     ('daylight 'doom-tomorrow-day)
+    ('solarized-light 'doom-solarized-light)
     (_ (or theme 'doom-one))))
 
 (defun ginkgo-compatible-theme-p (theme)

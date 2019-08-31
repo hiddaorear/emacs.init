@@ -111,4 +111,4 @@
                     (page-break-lines-mode 1))))
               t)))
 
-(provide 'init-set-package-source)
+(provide 'init-package)
