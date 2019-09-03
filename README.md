@@ -35,9 +35,15 @@
         - [格式化](#格式化)
         - [翻译](#翻译)
     - [插件的使用](#插件的使用)
+        - [pretty-hydra](#pretty-hydra)
+        - [yasnippet](#yasnippet)
+    - [web](#web)
     - [问题](#问题)
+        - [在终端中运行](#在终端中运行)
         - [无法使用中文输入法](#无法使用中文输入法)
-    - [todo](#todo)
+        - [Ubunut的emacs版本老旧](#Ubunut的emacs版本老旧)
+        - [subword-mode](#subword-mode)
+##     - [todo](#todo)
     - [额外依赖包](#额外依赖包)
     - [参考资料](#参考资料)
     - [change log](#change-log)
@@ -182,6 +188,12 @@
 `M-x yas-new-snippet`
 
 
+## web
+
+虽然配置中强制自动格式化有缺陷，总体来说还行。只是不习惯不能按照自己要求修改格式，这个比较坑。
+
+### prettier-emacs
+
 
 # 问题
 
@@ -199,7 +211,9 @@
 
 其他修改系统配置的办法，非常麻烦，而且不一定生效。
 
-## Ubunut的emacs版本老旧(2019年默认是emacs 25，最新版本是26)
+## Ubunut的emacs版本老旧
+
+2019年默认是emacs 25，最新版本是26。
 
 emacs 25会自动在init.el中添加`(package-initialize)`，会影响启动速度。
 
@@ -221,6 +235,10 @@ sudo add-apt-repository ppa:kelleyk/emacs
 sudo apt update
 sudo apt install emacs26
 ```
+
+## subword-mode
+
+在`subword-mode`模式下，someFunction，evil中搜索和移动，会变为 some Function。不知道是好是坏，之前用vim太多，不习惯。先习惯一下试试。修改命名的时候，应该比较方便些，搜索就麻烦一些。
 
 ## todo
 
