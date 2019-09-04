@@ -43,7 +43,7 @@
         - [无法使用中文输入法](#无法使用中文输入法)
         - [Ubunut的emacs版本老旧](#Ubunut的emacs版本老旧)
         - [subword-mode](#subword-mode)
-##     - [todo](#todo)
+    - [todo](#todo)
     - [额外依赖包](#额外依赖包)
     - [参考资料](#参考资料)
     - [change log](#change-log)

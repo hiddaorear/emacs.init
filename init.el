@@ -110,6 +110,8 @@ decrease this. If you experience stuttering, increase this.")
 (require 'init-lsp)
 (require 'init-prog)
 (require 'init-elisp)
+(require 'init-shell)
+(require 'init-eshell)
 (require 'init-web)
 
 ;;;;
