@@ -204,6 +204,13 @@
 
 `M-x yas-new-snippet`
 
+### magit
+
+#### 简单操作
+
+- 开启magit：`M-x magit-status`
+- 关闭magit：`q`
+
 
 ## web
 
