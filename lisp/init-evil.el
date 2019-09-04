@@ -37,11 +37,13 @@
         (setq evil-leader/in-all-states t)
         ;; keyboard shortcuts
         (evil-leader/set-key
-          "r" 'counsel-rg
+          "g" 'counsel-rg
           "a" 'avy-goto-char-2
           "b" 'ibuffer
           "k" 'kill-this-buffer
           "w" 'save-buffer
+          "r" 'counsel-bookmark
+          "m" 'bookmark-set
           )))
 
     ;; boot evil by default
