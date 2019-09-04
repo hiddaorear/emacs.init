@@ -35,6 +35,7 @@
         - [格式化](#格式化)
         - [翻译](#翻译)
         - [shell](#shell)
+        - [bookmark](#bookmark)
     - [插件的使用](#插件的使用)
         - [pretty-hydra](#pretty-hydra)
         - [yasnippet](#yasnippet)
@@ -166,6 +167,19 @@
 
 ### shell
 
+### bookmark
+
+#### bookmarking commands
+
+`C-x r m` – set a bookmark at the current location (e.g. in a file)
+`C-x r b` – jump to a bookmark
+`C-x r l` – list your bookmarks
+`M-x bookmark-delete` – delete a bookmark by name
+
+#### counsel-bookmark
+
+快捷键`C-x r b`，或者evil的leader的键：
+
 ## 插件的使用
 
 ### pretty-hydra
@@ -294,3 +308,4 @@ sudo apt install emacs26
 - 2019/8/31 下午，更新evil配置，补全搜索文档
 - 2019/8/31 下午，补全搜索的文档和snippet文档
 - 2019/9/4 晚上，shell与eshell
+- 2019/9/4 晚上，添加bookmark文档
