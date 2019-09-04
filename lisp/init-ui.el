@@ -258,7 +258,7 @@
 
 ;; font
 (progn
-  (set-frame-font "YaHei Consolas Hybrid-18"))
+  (set-frame-font "YaHei Consolas Hybrid-16"))
 
 ;; 避免中文输入法快捷键冲突
 (global-set-key (kbd "C-SPC") nil)
