@@ -39,6 +39,7 @@
     - [插件的使用](#插件的使用)
         - [pretty-hydra](#pretty-hydra)
         - [yasnippet](#yasnippet)
+        - [magit](#magit)
     - [web](#web)
     - [问题](#问题)
         - [在终端中运行](#在终端中运行)
@@ -210,6 +211,13 @@
 
 - 开启magit：`M-x magit-status`
 - 关闭magit：`q`
+- Tab键，显示折叠的信息
+- stage文件，光标移动到此文件，`s`
+- unstage，`u`
+- commit，`c`。再次按下`c`，会显示commit信息输入窗口，输入完毕按`C-c C-c`，完成commit
+- push，`p`
+- merge，`m`
+- checkout branch，`magit-branch-checkout`
 
 
 ## web
@@ -316,3 +324,4 @@ sudo apt install emacs26
 - 2019/8/31 下午，补全搜索的文档和snippet文档
 - 2019/9/4 晚上，shell与eshell
 - 2019/9/4 晚上，添加bookmark文档
+- 2019/9/5 凌晨，添加magit文档
