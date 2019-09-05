@@ -33,10 +33,8 @@
 ;; JavaScript
 (use-package js2-mode
   :defines flycheck-javascript-eslint-executable
-  :mode (("\\.js\\'" . js2-mode)
-         ("\\.jsx\\'" . js2-jsx-mode))
-  :interpreter (("node" . js2-mode)
-                ("node" . js2-jsx-mode))
+  :mode (("\\.js\\'" . js2-mode))
+  :interpreter (("node" . js2-mode))
   :hook ((js2-mode . js2-imenu-extras-mode)
          (js2-mode . js2-highlight-unused-variables-mode))
   :config
@@ -59,6 +57,28 @@
     :hook (js2-mode . js2-refactor-mode)
     :config (js2r-add-keybindings-with-prefix "C-c C-m")))
 
+(use-package rjsx-mode
+  :ensure t
+  :mode(("\\.js\\'" . rjsx-mode)
+        ("\\.jsx\\'" . rjsx-mode))
+  :init
+  (add-hook 'rjsx-mode-hook 'prettier-js-mode)
+  (add-hook 'rjsx-mode-hook 'tide-mode))
+
+(use-package tide
+  :ensure t
+  :mode(("\\.ts\\'" . typescript-mode))
+  :init
+  (add-hook 'typescript-mode-hook 'tide-mode)
+  (add-hook 'typescript-mode-hook 'prettier-js-mode)
+  :config
+  (tide-setup)
+  (flycheck-mode +1)
+  (setq flycheck-check-syntax-automatically '(save-mode-enabled))
+  (eldoc-mode +1)
+  (tide-hl-identifier-mode +1)
+  (company-mode +1))
+
 ;; Live browser JavaScript, CSS, and HTML interaction
 (use-package skewer-mode
   :diminish
@@ -80,10 +100,6 @@
 (use-package mocha
   :config (use-package mocha-snippets))
 
-;; Major mode for CoffeeScript code
-(use-package coffee-mode
-  :config (setq coffee-tab-width 2))
-
 ;; Major mode for editing web templates
 (use-package web-mode
   :mode "\\.\\(phtml\\|php|[gj]sp\\|as[cp]x\\|erb\\|djhtml\\|html?\\|hbs\\|ejs\\|jade\\|swig\\|tm?pl\\|vue\\)$"
@@ -95,12 +111,21 @@
 ;; Format HTML, CSS and JavaScript/JSON
 ;; Install: npm -g install prettier
 (use-package prettier-js
+             :ensure t
+             :config
+             (setq prettier-js-args '(
+                                      "--trailing-comma" "es5"
+                                      "--single-quote" "true"
+                                      "--print-width" "120"
+                                      "--tab-width" "4"
+                                      "--use-tabs" "false"
+                                      "--jsx-bracket-same-line" "false"
+                                      "--stylelint-integration" "true"
+                                      ))
   :hook ((js-mode js2-mode json-mode web-mode css-mode sgml-mode html-mode)
          .
          prettier-js-mode))
 
-(use-package haml-mode)
-(use-package php-mode)
 
 ;; REST
 (use-package restclient
