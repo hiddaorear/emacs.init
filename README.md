@@ -186,6 +186,8 @@
 
 ### shell
 
+`C-x k`可以用终止缓冲区的方式退出shell。
+
 ### bookmark
 
 #### bookmarking commands
@@ -239,7 +241,7 @@
 
 #### blame
 
-显示每一行的作者和提交信息
+显示每一行的作者和提交信息，修改blame显示的风格，默认是插入代码中的，可以修改为在左侧显示信息`M-x magit-blame-cycle-style`。
 
 - `M-x magit-blame`
 - `b`
