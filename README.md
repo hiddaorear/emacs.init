@@ -142,6 +142,12 @@
 
 `C-x C-b`或者evil的leader的键`b`
 
+管理buffer列表：
+
+- Run M-x ibuffer (built-in command).
+- On each line with a buffer you want to delete press 'd'.
+- When finished press 'x' to commit changes.
+
 ### 局部替换或编辑
 
 选择需要替换或编辑的区域，执行`narrow-to-region`，把文件截取了局部，然后可以在局部进行替换或编辑，不
