@@ -153,7 +153,25 @@
 
 #### dired
 
-`C-x d`打开dried。
+- `C-x d`打开dried。
+- `^`跳转到上层目录。
+
+
+常用操作
+
+| 操作             | 按键            | 备注   |
+| ---------------- | :-------------: | -----: |
+| 删除文件         | D               |        |
+| 删除被flag的文件 | x               |        |
+| 重命名文件       | R               |        |
+| 复制文件         | C               |        |
+| mark复制文件     | c               |        |
+| 创建子目录       | `+`             |        |
+| mark文件         | m               |        |
+| unmark文件       | u               |        |
+| unmark所有文件   | U               |        |
+| mark删除文件     | d               |        |
+
 
 [Emacs文件管理神器--dired常用操作说明](http://blog.lujun9972.win/blog/2016/12/10/emacs%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E7%A5%9E%E5%99%A8--dired%E5%B8%B8%E7%94%A8%E6%93%8D%E4%BD%9C%E8%AF%B4%E6%98%8E/)
 
@@ -173,6 +191,8 @@
 ### 翻译
 
 ### shell
+
+`C-x k`可以用终止缓冲区的方式退出shell。
 
 ### bookmark
 
@@ -224,6 +244,17 @@
 - push，`p`
 - merge，`m`
 - checkout branch，`magit-branch-checkout`
+
+#### blame
+
+显示每一行的作者和提交信息，修改blame显示的风格，默认是插入代码中的，可以修改为在左侧显示信息`M-x magit-blame-cycle-style`。
+
+- `M-x magit-blame`
+- `b`
+
+退出blame
+
+- `M-x magit-blame-quit`或者`C-c C-q`
 
 
 ## web
@@ -331,3 +362,4 @@ sudo apt install emacs26
 - 2019/9/4 晚上，shell与eshell
 - 2019/9/4 晚上，添加bookmark文档
 - 2019/9/5 凌晨，添加magit文档
+- 2019/9/5 晚上，dired操作文档
