@@ -126,7 +126,18 @@
       scroll-conservatively 100000)
 
 ;; Misc
-(setq-default fill-column 100)
+;; wrap
+;; (setq-default fill-column 100)
+;; unfill paragraph: the opposite of fill-paragraph
+(defun y:unfill-paragraph-or-region (&optional region)
+  "Takes a multi-line paragraph and makes it into a single line of text."
+  (interactive (progn (barf-if-buffer-read-only) '(t)))
+  (let ((fill-column (point-max))
+        ;; This would override `fill-column' if it's an integer.
+        (emacs-lisp-docstring-fill-column t))
+    (fill-paragraph nil region)))
+(define-key global-map "\M-Q" 'y:unfill-paragraph-or-region)
+
 (fset 'yes-or-no-p 'y-or-n-p)
 (setq visible-bell t
       inhibit-compacting-font-caches t) ; Don’t compact font caches during GC.
