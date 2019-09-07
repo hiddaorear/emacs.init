@@ -38,6 +38,7 @@
         - [yasnippet](#yasnippet)
         - [magit](#magit)
         - [use-package](#use-package)
+        - [evil](#evil)
     - [web](#web)
     - [常用操作](#常用操作)
     - [问题](#问题)
@@ -289,6 +290,12 @@
 
 [use-package](https://9r0k.com/use-package.html)
 
+### evil
+
+#### 遗忘过的快捷键
+
+- `C-v`列编辑模式
+
 
 ## web
 
@@ -413,3 +420,4 @@ sudo apt install emacs26
 - 2019/9/4 晚上，添加bookmark文档
 - 2019/9/5 凌晨，添加magit文档
 - 2019/9/5 晚上，dired操作文档
+- 2019/9/7 下午，新增use-package文档，以及fill-column问题
