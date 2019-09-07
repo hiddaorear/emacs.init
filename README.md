@@ -37,6 +37,7 @@
         - [pretty-hydra](#pretty-hydra)
         - [yasnippet](#yasnippet)
         - [magit](#magit)
+        - [use-package](#use-package)
     - [web](#web)
     - [常用操作](#常用操作)
     - [问题](#问题)
@@ -261,6 +262,33 @@
 
 - `M-x magit-blame-quit`或者`C-c C-q`
 
+### use-package
+
+#### 优点
+
+- 延迟加载包，对emacs性能友好
+- 提供包的各种hook，有了配置包的统一的代码编写规范
+
+#### 使用
+
+- `:init' 加载前准备
+- `:config' 加载后配置
+- `:commands` 自动加载命令
+- `:bind` 键绑定
+- `:bind-keymap`
+- `:map` 局部键绑定
+- `:disable`
+- `:load-path` 扩展加载路径
+- `:ensure` 自动安装
+- `:mode :interpreter` 模式和解释器
+- `hook` 钩子
+- `:defer` 延迟加载
+- `:after`
+- `:require`
+- `:custom` 自定义变量
+
+[use-package](https://9r0k.com/use-package.html)
+
 
 ## web
 
@@ -337,16 +365,12 @@ sudo apt install emacs26
 
 ## todo
 
-- magit
 - elisp
 - flycheck
 - highlight
 - lsp
 - org
 - prog
-- utils
-- vcs
-- web
 
 
 
