@@ -50,6 +50,7 @@
     (evil-mode 1))
   :config
   (evil-mode)
+
   ;; vim-like keybindings everywhere in emacs
   (use-package evil-collection
     :after evil

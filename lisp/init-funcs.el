@@ -188,6 +188,7 @@
     ('light 'doom-one-light)
     ('daylight 'doom-tomorrow-day)
     ('solarized-light 'doom-solarized-light)
+    ('solarized-dark 'doom-solarized-dark)
     (_ (or theme 'doom-one))))
 
 (defun ginkgo-compatible-theme-p (theme)

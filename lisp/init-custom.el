@@ -44,7 +44,7 @@
           (const :tag "Tencent" tencent)
           (const :tag "Tuna" tuna)))
 
-(defcustom ginkgo-theme 'solarized-light
+(defcustom ginkgo-theme 'solarized-dark
   "Set color theme."
   :group 'ginkgo
   :type '(choice
@@ -54,6 +54,7 @@
           (const :tag "Light theme" light)
           (const :tag "Daylight theme" daylight)
           (const :tag "Solarized light theme" solarized-light)
+          (const :tag "Solarized dark theme" solarized-dark)
           symbol))
 
 (defcustom ginkgo-dashboard t
