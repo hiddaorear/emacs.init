@@ -45,6 +45,7 @@
     - [问题](#问题)
         - [在终端中运行](#在终端中运行)
         - [无法使用中文输入法](#无法使用中文输入法)
+        - [mac中安装emacs](#mac中安装emacs)
         - [Ubunut的emacs版本老旧](#Ubunut的emacs版本老旧)
         - [subword-mode](#subword-mode)
     - [todo](#todo)
@@ -283,6 +284,15 @@
 
 `emacs -nw`
 
+## mac中安装emacs
+
+2019年的Mac版本中，添加`--with-cocoa --srgb`参数报错，无法安装。
+
+``` shell
+brew cask install emacs
+ln -Fs $(find /usr/local -name "Emacs.app") /Applications/Emacs.app
+```
+
 ## 无法使用中文输入法
 
 简单无副作用的办法： 命令行使用`LC_CTYPE=zh_CN.UTF-8 emacs`启动即可。设置别名`alias emacs="LC_CTYPE=zh_CN.UTF-8 emacs"`
@@ -309,7 +319,7 @@ sudo apt install emacs-snapshot
 
 ### 安装指定版本
 
-有时候没有最新版本，2019年8月份就没有emacs27，实际上此时27已经发布了。
+有时候没有最新版本，2019年8月份`ppa:kelleyk/emacs`没有emacs27，实际上此时27已经发布了。
 
 ``` shell
 sudo apt remove --autoremove emacs25 emacs25-nox
