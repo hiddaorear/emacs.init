@@ -21,7 +21,6 @@
       (setq-local flycheck-markdown-markdownlint-cli-config
                   (concat md-lint-dir md-lint))))
   :hook ((markdown-mode . flyspell-mode)
-         (markdown-mode . auto-fill-mode)
          (markdown-mode . flycheck-enable-markdownlint))
   :mode (("README\\.md\\'" . gfm-mode))
   :init
@@ -59,16 +58,17 @@ document.addEventListener('DOMContentLoaded', () => {
 </script>
 ")
   :config
+
   ;; Preview via `grip'
   ;; Install: pip install grip
   (use-package grip-mode
     :bind (:map markdown-mode-command-map
-                ("g" . grip-mode)))
+           ("g" . grip-mode)))
 
   ;; Table of contents
   (use-package markdown-toc
     :bind (:map markdown-mode-command-map
-                ("r" . markdown-toc-generate-or-refresh-toc))))
+           ("r" . markdown-toc-generate-or-refresh-toc))))
 
 (provide 'init-markdown)
 
