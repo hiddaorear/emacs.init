@@ -39,6 +39,7 @@
         - [magit](#magit)
         - [use-package](#use-package)
         - [evil](#evil)
+        - [undo-tree](#undo-tree)
     - [web](#web)
     - [常用操作](#常用操作)
     - [问题](#问题)
@@ -295,6 +296,10 @@
 #### 遗忘过的快捷键
 
 - `C-v`列编辑模式
+
+### undo-tree
+
+emacs 只有 undo ，没有 redo。emacs的redo就是 undo undo。
 
 
 ## web
