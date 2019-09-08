@@ -51,6 +51,7 @@
     - [todo](#todo)
     - [额外依赖包](#额外依赖包)
     - [参考资料](#参考资料)
+    - [社区](#社区)
     - [change log](#change-log)
 
 <!-- markdown-toc end -->
@@ -399,6 +400,12 @@ sudo apt install emacs26
 [从doom emacs中学习快速启动](https://emacs-china.org/t/doom-emacs/10354)
 
 [技术人怎么领导一个开源社区？](https://manateelazycat.github.io/opensource/2019/08/03/how-open-source-works.html)
+
+## 社区
+
+[spacemacs聊天室](https://gitter.im/syl20bnr/spacemacs)
+
+[emacs-china](https://emacs-china.org/)
 
 ## 参考资料
 
