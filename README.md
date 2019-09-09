@@ -315,6 +315,10 @@ emacs 只有 undo ，没有 redo。emacs的redo就是 undo undo。
 
 在配置代码之后执行`C-x C-e`即可。
 
+### 退出read-only
+
+`M-x toggle-read-only`
+
 
 # 问题
 
