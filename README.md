@@ -191,6 +191,7 @@
 - 向下向上：`C-n/C-p`
 - 向下向上翻页：`C-v/M-v`
 - 跳转到buffer最开始或最后：`C-M-p/C-M-n`
+- `move-to-window-line-top-bottom`滚动屏幕
 
 
 ### 代码段
@@ -297,6 +298,12 @@
 #### 遗忘过的快捷键
 
 - `C-v`列编辑模式
+
+- H: move to top of screen
+
+- L: move to bottom of screen
+
+- M: move to middle of screen
 
 ### undo-tree
 
