@@ -59,11 +59,9 @@
 
 (use-package rjsx-mode
   :ensure t
-  :mode(("\\.js\\'" . rjsx-mode)
-        ("\\.jsx\\'" . rjsx-mode))
+  :mode(("\\.jsx\\'" . rjsx-mode))
   :init
-  (add-hook 'rjsx-mode-hook 'prettier-js-mode)
-  (add-hook 'rjsx-mode-hook 'tide-mode))
+  (add-hook 'rjsx-mode-hook 'prettier-js-mode))
 
 (use-package tide
   :ensure t
@@ -92,9 +90,6 @@
     (diminish 'skewer-css-mode))
   (with-eval-after-load 'skewer-html
     (diminish 'skewer-html-mode)))
-
-;; Typescript
-(use-package typescript-mode)
 
 ;; Run Mocha or Jasmine tests
 (use-package mocha
