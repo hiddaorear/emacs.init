@@ -191,6 +191,7 @@
 - 向下向上：`C-n/C-p`
 - 向下向上翻页：`C-v/M-v`
 - 跳转到buffer最开始或最后：`C-M-p/C-M-n`
+- `move-to-window-line-top-bottom`滚动屏幕
 
 
 ### 代码段
@@ -298,6 +299,12 @@
 
 - `C-v`列编辑模式
 
+- H: move to top of screen
+
+- L: move to bottom of screen
+
+- M: move to middle of screen
+
 ### undo-tree
 
 emacs 只有 undo ，没有 redo。emacs的redo就是 undo undo。
@@ -314,6 +321,10 @@ emacs 只有 undo ，没有 redo。emacs的redo就是 undo undo。
 ### 不重启emacs，执行新配置
 
 在配置代码之后执行`C-x C-e`即可。
+
+### 退出read-only
+
+`M-x toggle-read-only`
 
 
 # 问题
