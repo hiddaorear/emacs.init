@@ -318,6 +318,8 @@ emacs 只有 undo ，没有 redo。emacs的redo就是 undo undo。
 
 重新执行这个指令会关闭这个mode。
 
+> This convention is for minor-modes - Doing a M-x "minor-mode-name" again disables that minor mode. org-mode is a major mode. When you do this, emacs has no clue which major mode to go into. There must be a major mode always active.
+
 
 ## web
 
