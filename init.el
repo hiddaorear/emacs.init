@@ -113,6 +113,6 @@ decrease this. If you experience stuttering, increase this.")
 (require 'init-shell)
 (require 'init-eshell)
 (require 'init-web)
-;;(require 'init-ocaml)
 
 ;;;;
+(put 'narrow-to-region 'disabled nil)
