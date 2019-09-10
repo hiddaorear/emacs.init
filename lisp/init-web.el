@@ -60,13 +60,15 @@
 (use-package rjsx-mode
   :ensure t
   :mode(("\\.jsx\\'" . rjsx-mode))
-  )
+  :init
+  (add-hook 'rjsx-mode-hook 'prettier-js-mode))
 
 (use-package tide
   :ensure t
   :mode(("\\.ts\\'" . typescript-mode))
   :init
   (add-hook 'typescript-mode-hook 'tide-mode)
+  (add-hook 'typescript-mode-hook 'prettier-js-mode)
   :config
   (tide-setup)
   (flycheck-mode +1)
@@ -106,6 +108,9 @@
 (use-package prettier-js
              :ensure t
              :config
+             (flycheck-mode +1)
+             (setq flycheck-check-syntax-automatically '(save-mode-enabled))
+
              (setq prettier-js-args '(
                                       "--trailing-comma" "es5"
                                       "--single-quote" "true"
@@ -115,7 +120,7 @@
                                       "--jsx-bracket-same-line" "false"
                                       "--stylelint-integration" "true"
                                       ))
-  :hook ((json-mode css-mode sgml-mode html-mode)
+  :hook ((js-mode js2-mode json-mode web-mode css-mode sgml-mode html-mode)
          .
          prettier-js-mode))
 

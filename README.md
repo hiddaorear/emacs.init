@@ -40,6 +40,7 @@
         - [use-package](#use-package)
         - [evil](#evil)
         - [undo-tree](#undo-tree)
+        - [prettier-js](#prettier-js)
     - [web](#web)
     - [常用操作](#常用操作)
     - [问题](#问题)
@@ -308,6 +309,14 @@
 ### undo-tree
 
 emacs 只有 undo ，没有 redo。emacs的redo就是 undo undo。
+
+### prettier-js
+
+格式化代码插件，保存的时候自动触发，由于有习惯性保存动作，默认开启这个插件会导致卡顿。同时，默认保存代码就格式化，会导致修改别人的代码，自动格式化了。
+
+`M-x prettier-js`
+
+重新执行这个指令会关闭这个mode。
 
 
 ## web
