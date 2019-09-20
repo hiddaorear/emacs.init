@@ -28,7 +28,8 @@
   :hook ((css-mode scss-mode less-css-mode) . turn-on-css-eldoc))
 
 ;; JSON mode
-(use-package json-mode)
+(use-package json-mode
+             :mode(("\\.json\\'" . json-mode)))
 
 ;; JavaScript
 (use-package js2-mode
@@ -77,24 +78,6 @@
   (tide-hl-identifier-mode +1)
   (company-mode +1))
 
-;; Live browser JavaScript, CSS, and HTML interaction
-(use-package skewer-mode
-  :diminish
-  :hook (((js-mode js2-mode). skewer-mode)
-         (css-mode . skewer-css-mode)
-         (web-mode . skewer-html-mode)
-         (html-mode . skewer-html-mode))
-  :init
-  ;; diminish
-  (with-eval-after-load 'skewer-css
-    (diminish 'skewer-css-mode))
-  (with-eval-after-load 'skewer-html
-    (diminish 'skewer-html-mode)))
-
-;; Run Mocha or Jasmine tests
-(use-package mocha
-  :config (use-package mocha-snippets))
-
 ;; Major mode for editing web templates
 (use-package web-mode
   :mode "\\.\\(phtml\\|php|[gj]sp\\|as[cp]x\\|erb\\|djhtml\\|html?\\|hbs\\|ejs\\|jade\\|swig\\|tm?pl\\|vue\\)$"
@@ -118,9 +101,7 @@
                                       "--jsx-bracket-same-line" "false"
                                       "--stylelint-integration" "true"
                                       ))
-  :hook ((js-mode js2-mode json-mode web-mode css-mode sgml-mode html-mode)
-         .
-         prettier-js-mode))
+  )
 
 
 ;; REST

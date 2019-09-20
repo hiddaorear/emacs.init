@@ -44,7 +44,7 @@
           (const :tag "Tencent" tencent)
           (const :tag "Tuna" tuna)))
 
-(defcustom ginkgo-theme 'solarized-dark
+(defcustom ginkgo-theme 'solarized-light
   "Set color theme."
   :group 'ginkgo
   :type '(choice
