@@ -36,8 +36,8 @@
   :defines flycheck-javascript-eslint-executable
   :mode (("\\.js\\'" . js2-mode))
   :interpreter (("node" . js2-mode))
-  :hook ((js2-mode . js2-imenu-extras-mode)
-         (js2-mode . js2-highlight-unused-variables-mode))
+  ;;:hook ((js2-mode . js2-imenu-extras-mode)
+  ;;      (js2-mode . js2-highlight-unused-variables-mode))
   :config
   ;; Use default keybindings for lsp
   (when ginkgo-lsp
@@ -60,9 +60,10 @@
 
 (use-package rjsx-mode
   :ensure t
-  :mode(("\\.jsx\\'" . rjsx-mode))
+  ;;:mode(("\\.jsx\\'" . rjsx-mode))
   :init
-  (add-hook 'rjsx-mode-hook 'prettier-js-mode))
+  ;;(add-hook 'rjsx-mode-hook 'prettier-js-mode)
+  )
 
 (use-package tide
   :ensure t
@@ -103,19 +104,6 @@
                                       ))
   )
 
-
-;; REST
-(use-package restclient
-  :mode ("\\.http\\'" . restclient-mode)
-  :config
-  (use-package restclient-test
-    :diminish
-    :hook (restclient-mode . restclient-test-mode))
-
-  (with-eval-after-load 'company
-    (use-package company-restclient
-      :defines company-backends
-      :init (add-to-list 'company-backends 'company-restclient))))
 
 (provide 'init-web)
 
