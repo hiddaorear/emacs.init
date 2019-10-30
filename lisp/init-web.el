@@ -36,8 +36,8 @@
   :defines flycheck-javascript-eslint-executable
   :mode (("\\.js\\'" . js2-mode))
   :interpreter (("node" . js2-mode))
-  ;;:hook ((js2-mode . js2-imenu-extras-mode)
-  ;;      (js2-mode . js2-highlight-unused-variables-mode))
+  :hook ((js2-mode . js2-imenu-extras-mode)
+        (js2-mode . js2-highlight-unused-variables-mode))
   :config
   ;; Use default keybindings for lsp
   (when ginkgo-lsp
@@ -60,9 +60,9 @@
 
 (use-package rjsx-mode
   :ensure t
-  ;;:mode(("\\.jsx\\'" . rjsx-mode))
+  :mode(("\\.jsx\\'" . rjsx-mode))
   :init
-  ;;(add-hook 'rjsx-mode-hook 'prettier-js-mode)
+  (add-hook 'rjsx-mode-hook 'prettier-js-mode)
   )
 
 (use-package tide
@@ -104,6 +104,7 @@
                                       ))
   )
 
+(setq tab-always-indent 'complete)
 
 (provide 'init-web)
 
