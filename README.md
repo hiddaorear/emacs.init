@@ -149,6 +149,10 @@
 
 ### buffer
 
+#### kill buffer
+
+`C-x k`
+
 #### ibuffer
 
 `C-x C-b`或者evil的leader的键`b`
