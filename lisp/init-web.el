@@ -39,6 +39,7 @@
   :hook ((js2-mode . js2-imenu-extras-mode)
         (js2-mode . js2-highlight-unused-variables-mode))
   :config
+  (setq js2-strict-missing-semi-warning nil)
   ;; Use default keybindings for lsp
   (when ginkgo-lsp
     (unbind-key "M-." js2-mode-map))
@@ -101,6 +102,7 @@
                                       "--use-tabs" "false"
                                       "--jsx-bracket-same-line" "false"
                                       "--stylelint-integration" "true"
+                                      "--semi" "false"
                                       ))
   )
 
